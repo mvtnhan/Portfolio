@@ -8,14 +8,10 @@
   background-image: url("./images/imgHeader.jpg");
   background-size: 100% 100%;
 }
-
 .Logo {
   width: 111px;
   height: 32px;
   margin-top: 30px;
-}
-.path {
-  fill: #ffffff;
 }
 .icon {
   width: 40px;
@@ -23,15 +19,17 @@
 }
 .Features {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: 1em;
   line-height: 1.5;
   color: #637381;
   flex-wrap: wrap;
+  max-width: 990px;
+  margin: 0 auto;
 }
 .boxfeatures {
-  padding: 20px;
-  width: 220px;
+  flex: 1;
+  max-width: 250px;
 }
 .Logos {
   margin: auto;
@@ -57,14 +55,15 @@ a {
 .Email {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 input.enteremail {
   display: inline-block;
   border-radius: 4px;
   border: none;
-  font-size: 10px;
-  padding: 13px;
+  font-size: 16px;
+  padding: 10px;
 
   text-align: start;
 }
@@ -74,7 +73,7 @@ button {
   padding: 10px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 17px;
   margin-left: 4px;
   border-radius: 4px;
 }
@@ -92,4 +91,33 @@ button.start2:hover {
 }
 h3 {
   color: #212b35;
+  margin-top: 5px;
+}
+img {
+  width: 60%;
+}
+@media (max-width: 760px) {
+  .Features {
+    display: block;
+    text-align: center;
+  }
+  .boxfeatures {
+    max-width: 80%;
+    margin: 45px auto;
+  }
+  h3 {
+    margin: 0px;
+  }
+  p {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 340px) {
+  .Email {
+    display: block;
+    /*flex-direction: colum*/
+  }
+  input.enteremail {
+    max-width: 100%;
+  }
 }

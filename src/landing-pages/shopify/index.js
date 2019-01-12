@@ -5,15 +5,12 @@ import { ReactComponent as Logoshop } from "./images/logoshopify.svg";
 import { ReactComponent as Icon2 } from "./images/svgexport-2.svg";
 import { ReactComponent as Icon3 } from "./images/svgexport-3.svg";
 import { ReactComponent as Icon4 } from "./images/svgexport-4.svg";
-// import icon2 from "./images/svgexport-2.svg";
-// import icon3 from "./images/svgexport-3.svg";
-// import icon4 from "./images/svgexport-4.svg";
 
 export function renderHeader() {
   return (
     <div className="Header">
       <a href="/shopify">
-        <Logoshop className="Logo" fill="#fffffff" />
+        <Logoshop className="Logo" />
       </a>
       <h1>Sell online with Shopify</h1>
       <h2>Trusted by over 600,000 businesses worldwide</h2>
@@ -30,7 +27,7 @@ export function renderHeader() {
           Try Shopify free for 14 days. No risk, and no credit card required
         </h6>
       </div>
-      <img src={imglaptop} />
+      <img src={imglaptop} alt="imglaptop" />
     </div>
   );
 }
@@ -68,16 +65,7 @@ export function renderFeatures() {
   );
 }
 export function renderLogos() {
-  return (
-    <div className="Logos">
-      <a className="logo1" href="#" />
-      <a className="logo2" href="#" />
-      <a className="logo3" href="#" />
-      <a className="logo4" href="#" />
-      <a className="logo5" href="#" />
-      <a className="logo6" href="#" />
-    </div>
-  );
+  return <div className="Logos" />;
 }
 export function renderQuotes() {
   return (
@@ -94,8 +82,8 @@ export function renderQuotes() {
 export function renderFooter() {
   return (
     <div className="Footer">
-      <a href="#">Terms of Service</a>
-      <a href="#">Privacy Policy</a>
+      <a href="http://localhost:3000/shopify">Terms of Service</a>
+      <a href="http://localhost:3000/shopify">Privacy Policy</a>
     </div>
   );
 }

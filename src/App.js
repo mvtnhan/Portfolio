@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Route path="/shopify" component={Shopify} />
+        <Route path="/" component={Shopify} />
       </Router>
     );
   }
