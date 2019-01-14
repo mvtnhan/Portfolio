@@ -1,5 +1,4 @@
 .Wrapper {
-  display: flex-box;
   background-color: white;
 }
 .Header {
@@ -7,15 +6,6 @@
   text-align: center;
   background-image: url("./images/imgHeader.jpg");
   background-size: 100% 100%;
-}
-.Logo {
-  width: 111px;
-  height: 32px;
-  margin-top: 30px;
-}
-.icon {
-  width: 40px;
-  height: 40px;
 }
 .Features {
   display: flex;
@@ -25,32 +15,26 @@
   color: #637381;
   flex-wrap: wrap;
   max-width: 990px;
-  margin: 0 auto;
-}
-.boxfeatures {
-  flex: 1;
-  max-width: 250px;
+  margin: 80px auto;
 }
 .Logos {
+  text-align: center;
   margin: auto;
   max-width: 930px;
-  background-image: url("./images/logo1.jpg");
-  background-size: 100% 100%;
 }
 .Quotes {
-  text-align: center;
-}
-main {
-  justify-content: center;
-  width: auto;
+  margin-top: 75px;
   text-align: center;
 }
 .Footer {
+  margin-top: 45px;
   text-align: right;
   margin-bottom: 25px;
 }
-a {
-  margin-right: 20px;
+.Logo {
+  width: 111px;
+  height: 32px;
+  margin-top: 30px;
 }
 .Email {
   display: flex;
@@ -66,6 +50,30 @@ input.enteremail {
   padding: 10px;
 
   text-align: start;
+}
+.boxfeatures {
+  flex: 1;
+  max-width: 250px;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+main {
+  justify-content: center;
+  width: auto;
+  text-align: center;
+}
+img {
+  width: 60%;
+}
+img.logotext {
+  width: 90%;
+}
+a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #5c6ac4;
 }
 button {
   border: none;
@@ -89,21 +97,39 @@ button.start:hover {
 button.start2:hover {
   background-color: #202e78;
 }
+h1 {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+h2 {
+  margin: 15px;
+}
 h3 {
   color: #212b35;
   margin-top: 5px;
 }
-img {
-  width: 60%;
+h5 {
+  margin: 16px;
+}
+h6 {
+  margin: 25px;
 }
 @media (max-width: 760px) {
   .Features {
     display: block;
     text-align: center;
   }
+  .Quotes {
+    margin: 60px;
+  }
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
   .boxfeatures {
     max-width: 80%;
-    margin: 45px auto;
+    margin: 85px auto;
   }
   h3 {
     margin: 0px;
@@ -111,13 +137,23 @@ img {
   p {
     margin-top: 0px;
   }
+  img {
+    width: 95%;
+  }
+  .Logos {
+    display: none;
+  }
+  a {
+    margin: 5px auto;
+  }
 }
 @media (max-width: 340px) {
-  .Email {
-    display: block;
-    /*flex-direction: colum*/
-  }
   input.enteremail {
-    max-width: 100%;
+    width: 88%;
+    text-align: center;
+  }
+  button {
+    flex-basis: 95%;
+    margin: 10px auto;
   }
 }

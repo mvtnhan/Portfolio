@@ -1,0 +1,177 @@
+$mau-xanh: #5c6ac4;
+$mau-start-email: #30373b;
+$mau-hover-email: #22272a;
+$mau-hover-xanh: #202e78;
+@mixin start($color) {
+  background-color: $color;
+}
+@mixin hover($color) {
+  background-color: $color;
+}
+button {
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 17px;
+  margin-left: 4px;
+  border-radius: 4px;
+}
+.Wrapper {
+  background-color: white;
+  .Header {
+    color: white;
+    text-align: center;
+    background-image: url("./images/imgHeader.jpg");
+    background-size: 100% 100%;
+    .Logo {
+      width: 111px;
+      height: 32px;
+      margin-top: 30px;
+    }
+    .Email {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    input.enteremail {
+      display: inline-block;
+      border-radius: 4px;
+      border: none;
+      font-size: 16px;
+      padding: 10px;
+      text-align: start;
+    }
+    button {
+      @extend button;
+    }
+    .start {
+      @include start($mau-start-email);
+    }
+    .start:hover {
+      @include hover($mau-hover-email);
+    }
+  }
+  .Features {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #637381;
+    flex-wrap: wrap;
+    max-width: 990px;
+    margin: 80px auto;
+    .boxfeatures {
+      flex: 1;
+      max-width: 250px;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .Logos {
+    text-align: center;
+    margin: auto;
+    max-width: 930px;
+  }
+  .Quotes {
+    margin-top: 75px;
+    text-align: center;
+    main {
+      justify-content: center;
+      width: auto;
+      text-align: center;
+    }
+    button {
+      @extend button;
+    }
+    .start2 {
+      @include start($mau-xanh);
+    }
+    .start2:hover {
+      @include hover($mau-hover-xanh);
+    }
+  }
+  .Footer {
+    margin-top: 45px;
+    text-align: right;
+    margin-bottom: 25px;
+  }
+  a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: $mau-xanh;
+  }
+  h1 {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  h2 {
+    margin: 15px;
+  }
+  h3 {
+    color: #212b35;
+    margin-top: 5px;
+  }
+  h5 {
+    margin: 16px;
+  }
+  h6 {
+    margin: 25px;
+  }
+}
+img {
+  width: 80%;
+  .logotext {
+    width: 90%;
+  }
+}
+
+@media (max-width: 760px) {
+  .Wrapper {
+    .Features {
+      display: block;
+      text-align: center;
+      .boxfeatures {
+        max-width: 80%;
+        margin: 85px auto;
+      }
+    }
+    .Quotes {
+      margin: 60px;
+    }
+    .Footer {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .Logos {
+      display: none;
+    }
+    img {
+      width: 95%;
+    }
+    a {
+      margin: 5px auto;
+    }
+    h3 {
+      margin: 0px;
+    }
+    p {
+      margin-top: 0px;
+    }
+  }
+}
+@media (max-width: 340px) {
+  input.enteremail {
+    width: 88%;
+    text-align: center;
+  }
+  button {
+    flex-basis: 95%;
+    margin: 10px auto;
+  }
+}

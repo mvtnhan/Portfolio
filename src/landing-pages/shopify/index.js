@@ -1,6 +1,7 @@
 import React from "react";
-import "./index.css";
+import "./index.scss";
 import imglaptop from "./images/imgfooterHeader.png";
+import logo from "./images/logo.jpg";
 import { ReactComponent as Logoshop } from "./images/logoshopify.svg";
 import { ReactComponent as Icon2 } from "./images/svgexport-2.svg";
 import { ReactComponent as Icon3 } from "./images/svgexport-3.svg";
@@ -65,7 +66,11 @@ export function renderFeatures() {
   );
 }
 export function renderLogos() {
-  return <div className="Logos" />;
+  return (
+    <div className="Logos">
+      <img className="logotext" src={logo} alt="imgLogoText" />
+    </div>
+  );
 }
 export function renderQuotes() {
   return (
