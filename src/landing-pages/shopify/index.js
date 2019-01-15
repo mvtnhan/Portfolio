@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import imglaptop from "./images/imgfooterHeader.png";
+import imglaptop from "./images/imglaptop.png";
 import logo from "./images/logo.jpg";
 import { ReactComponent as Logoshop } from "./images/logoshopify.svg";
 import { ReactComponent as Icon2 } from "./images/svgexport-2.svg";
@@ -14,8 +14,8 @@ export function renderHeader() {
         <Logoshop className="Logo" />
       </a>
       <h1>Sell online with Shopify</h1>
-      <h2>Trusted by over 600,000 businesses worldwide</h2>
-      <div className="Email-textbox-button-text">
+      <h3>Trusted by over 600,000 businesses worldwide</h3>
+      <div className="Box-email">
         <div className="Email">
           <input
             className="enteremail"
@@ -24,11 +24,13 @@ export function renderHeader() {
           />
           <button className="start">Start free trial</button>
         </div>
-        <h6>
+        <p>
           Try Shopify free for 14 days. No risk, and no credit card required
-        </h6>
+        </p>
       </div>
-      <img src={imglaptop} alt="imglaptop" />
+      <div className="imglaptop">
+        <img src={imglaptop} alt="imglaptop" />
+      </div>
     </div>
   );
 }
@@ -37,7 +39,9 @@ export function renderFeatures() {
     <div className="Features">
       <div className="boxfeatures">
         <Icon2 className="icon" />
-        <h3> Beautiful themes that are responsive and customizable</h3>
+        <h3 className="title">
+          Beautiful themes that are responsive and customizable
+        </h3>
         <p>
           No design skills needed. You have complete control over the look and
           feel of your website, from its layout, to content and colors.
@@ -46,7 +50,7 @@ export function renderFeatures() {
 
       <div className="boxfeatures">
         <Icon3 className="icon" />
-        <h3> Pricing as low as $9/month</h3>
+        <h3 className="title"> Pricing as low as $9/month</h3>
         <p>
           Whether you sell online, on social media, in store, or out of the
           trunk of your car, Shopify has you covered. Start selling anywhere for
@@ -56,7 +60,7 @@ export function renderFeatures() {
 
       <div className="boxfeatures">
         <Icon4 className="icon" />
-        <h3>Trusted by over 600,000 businesses worldwide</h3>
+        <h3 className="title">Trusted by over 600,000 businesses worldwide</h3>
         <p>
           Shopify handles everything from marketing and payments, to secure
           checkout and shipping
@@ -68,7 +72,7 @@ export function renderFeatures() {
 export function renderLogos() {
   return (
     <div className="Logos">
-      <img className="logotext" src={logo} alt="imgLogoText" />
+      <img src={logo} alt="imgLogoText" />
     </div>
   );
 }
@@ -79,7 +83,7 @@ export function renderQuotes() {
         "Shopify is better than any other platform we've played with, and we've
         played with them all"
       </h3>
-      <h5>JONATHON BAYME, CEO OF THEORY11</h5>
+      <p>JONATHON BAYME, CEO OF THEORY11</p>
       <button className="start2">Start free trial</button>
     </div>
   );
