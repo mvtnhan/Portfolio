@@ -1,49 +1,85 @@
-$color-blue-darker: #5c6ac4;
-$color-start-email: #30373b;
-$color-hover-email: #22272a;
-$color-hover-bottom: #202e78;
-
-.Wrapper {
+.Shopify {
   background-color: white;
-  .Header {
+
+  .Button {
+    display: inline-block;
+    border: none;
     color: white;
+    padding: 15px;
     text-align: center;
-    background-image: url("./images/imgHeader.jpg");
+    font-size: 17px;
+    margin-left: 4px;
+    border-radius: 4px;
+  }
+
+  .ButtonStart {
+    background-color: #30373b;
+  }
+
+  .ButtonBottom {
+    margin-top: 30px;
+    background-color: #5c6ac4;
+  }
+
+  .Header {
+    color: #ffffff;
+    text-align: center;
+    background-image: url("./images/header-bg.jpg");
     background-size: 100% 100%;
-    a svg {
+    //margin: 5px auto;
+    // margin: 0 auto;
+    .Logo svg {
       width: 10%;
-      margin: 30px auto;
+      margin: 50px auto;
     }
+
+    .MainTitle {
+      margin: 0 auto;
+      font-size: 3.75em;
+      font-weight: 900;
+    }
+
+    .SubTitle {
+      margin: 5px auto;
+      font-size: 2.25em;
+      font-weight: 400;
+    }
+
     .BoxEmail {
       margin-bottom: 40px;
+
+      .Email {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 15px auto;
+
+        .EnterEmail {
+          display: inline-block;
+          border-radius: 4px;
+          border: none;
+          font-size: 16px;
+          padding: 15px;
+          text-align: start;
+        }
+
+        .ButtonStart:hover {
+          background-color: #22272a;
+        }
+      }
     }
-    .Email {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 15px auto;
-    }
-    input {
-      display: inline-block;
-      border-radius: 4px;
-      border: none;
-      font-size: 16px;
-      padding: 15px;
-      text-align: start;
-    }
-    button {
-      @extend button;
-      background-color: $color-start-email;
-    }
-    button:hover {
-      background-color: $color-hover-email;
-    }
-    img {
-      margin: 0 auto;
+
+    // .TextTry {
+    //   margin: 0px;
+    // }
+
+    .Laptop {
+      //margin: 0 auto;
       width: 50%;
     }
   }
+
   .Features {
     display: flex;
     justify-content: space-evenly;
@@ -53,104 +89,102 @@ $color-hover-bottom: #202e78;
     flex-wrap: wrap;
     max-width: 60%;
     margin: 80px auto;
+
     .BoxFeatures {
       flex: 1;
-      max-width: 250px;
+      max-width: 300px;
+      padding: 0px 5px;
+
       svg {
         width: 40px;
         height: 40px;
       }
+
       h3 {
         color: #212b35;
-        font-size: 1.1em;
-        font-weight: bold;
+        //font-size: 1.1em;
+        //font-weight: bold;
       }
     }
   }
-  .Logos {
-    text-align: center;
-    margin: auto;
-    max-width: 930px;
+  .Newspapers {
+    padding: 0 15%;
+
+    img {
+      width: 100%;
+    }
   }
+
   .Quotes {
-    margin-top: 75px;
+    margin-top: 90px;
     text-align: center;
+
     h3 {
+      margin: 0 auto;
       font-size: 1.75em;
       font-weight: 700;
-      width: 850px;
+      width: 80%;
+      max-width: 860px;
       line-height: 1.5;
       color: #212b35;
     }
-    button {
-      @extend button;
-      background-color: $color-blue-darker;
+
+    p {
+      margin: 20px auto;
     }
-    button:hover {
-      background-color: $color-hover-bottom;
+
+    .ButtonBottom:hover {
+      background-color: #202e78;
     }
   }
+
   .Footer {
-    margin-top: 45px;
+    margin-top: 70px;
     text-align: right;
     margin-bottom: 25px;
-  }
-  a {
-    margin-bottom: 30px;
-    margin-right: 20px;
-    text-decoration: none;
-    color: $color-blue-darker;
-  }
-  h1 {
-    margin: 5px auto;
-    font-size: 3.75em;
-    font-weight: 900;
-  }
-  h3 {
-    color: white;
-    margin: 5px auto;
-    font-size: 2.25em;
-  }
-  .title {
-    color: #212b35;
-    font-size: 1.1em;
-    font-weight: bold;
-  }
-  button {
-    border: none;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    display: inline-block;
-    font-size: 17px;
-    margin-left: 4px;
-    border-radius: 4px;
-  }
-  img {
-    width: 100%;
+
+    a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #5c6ac4;
+    }
   }
 }
 
 @media (max-width: 768px) {
-  .Wrapper {
+  .Shopify {
     .Header {
-      .Logo {
+      .Logo svg {
         width: 20%;
       }
-      img {
-        width: 75%;
+
+      .Laptop {
+        width: 70%;
+      }
+
+      .MainTitle {
+        font-size: 1.7em;
+      }
+
+      .SubTitle {
+        font-size: 1.5em;
+        font-weight: 450;
       }
     }
+
     .Features {
       max-width: 95%;
-      .boxfeatures {
+
+      .BoxFeatures {
         max-width: 80%;
-        margin: 0 20px;
+        margin: 0 15px;
       }
     }
-    .Logos {
+
+    .Newspapers {
       display: none;
     }
+
     .Quotes {
       h3 {
         width: 80%;
@@ -158,56 +192,57 @@ $color-hover-bottom: #202e78;
         margin-bottom: 20px;
       }
     }
+
     .Footer {
       display: flex;
       flex-direction: column;
       text-align: center;
-      margin-top: 10px;
-    }
 
-    a {
-      margin: 5px auto;
-    }
-    h1 {
-      font-size: 1.7em;
-    }
-    h3 {
-      font-size: 1.5em;
-      font-weight: 450;
-    }
-    p {
-      margin: 0px;
+      .TagBottom {
+        margin: 5px auto;
+      }
     }
   }
 }
+
 @media (max-width: 360px) {
-  .Wrapper {
+  .Shopify {
     .Header {
-      a svg {
+      .Logo svg {
         width: 30%;
       }
+
+      .TextTry {
+        font-size: 0.8em;
+      }
+
+      .EnterEmail {
+        width: 88%;
+        text-align: center;
+      }
+
+      .Button {
+        flex-basis: 95%;
+        margin: 10px auto;
+      }
+
+      .Laptop {
+        width: 92%;
+      }
     }
+
     .Features {
       display: block;
-      .boxfeatures {
+
+      .BoxFeatures {
         margin: 55px auto;
       }
     }
+
     .Quotes {
       h3 {
         font-size: 1em;
       }
-    }
-    p {
-      font-size: 0.8em;
-    }
-    input.enteremail {
-      width: 88%;
-      text-align: center;
-    }
-    button {
-      flex-basis: 95%;
-      margin: 10px auto;
     }
   }
 }

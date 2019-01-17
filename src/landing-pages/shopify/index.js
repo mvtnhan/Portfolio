@@ -1,30 +1,34 @@
 import React from "react";
 import "./index.scss";
-import Imglaptop from "./images/imglaptop.png";
-import LogoJpg from "./images/logo.jpg";
+import laptop from "./images/laptop.png";
+import spapers from "./images/spapers.jpg";
 import { ReactComponent as Logoshop } from "./images/logoshopify.svg";
-import { ReactComponent as SvgFeatureThemes } from "./images/iconthemes.svg";
-import { ReactComponent as SvgFeaturePricing } from "./images/iconpricing.svg";
-import { ReactComponent as SvgFeatureTrust } from "./images/icontrust.svg";
+import { ReactComponent as SvgFeatureThemes } from "./images/feature-themes.svg";
+import { ReactComponent as SvgFeaturePricing } from "./images/feature-pricing.svg";
+import { ReactComponent as SvgFeatureTrust } from "./images/feature-trust.svg";
 
 export function renderHeader() {
   return (
     <div className="Header">
-      <a href="/shopify">
+      <a href="/shopify" className="Logo">
         <Logoshop />
       </a>
-      <h1>Sell online with Shopify</h1>
-      <h3>Trusted by over 600,000 businesses worldwide</h3>
+      <h1 className="MainTitle">Sell online with Shopify</h1>
+      <h3 className="SubTitle">Trusted by over 600,000 businesses worldwide</h3>
       <div className="BoxEmail">
         <div className="Email">
-          <input type="text" placeholder="Enter your email address" />
-          <button>Start free trial</button>
+          <input
+            className="EnterEmail"
+            type="text"
+            placeholder="Enter your email address"
+          />
+          <button className="Button ButtonStart">Start free trial</button>
         </div>
         <p>
           Try Shopify free for 14 days. No risk, and no credit card required
         </p>
       </div>
-      <img src={Imglaptop} alt="imglaptop" />
+      <img className="Laptop" src={laptop} alt="laptop" />
     </div>
   );
 }
@@ -61,10 +65,10 @@ export function renderFeatures() {
     </div>
   );
 }
-export function renderLogos() {
+export function renderNewspapers() {
   return (
-    <div className="Logos">
-      <img src={LogoJpg} alt="imgLogoText" />
+    <div className="Newspapers">
+      <img src={spapers} alt="new spapers" />
     </div>
   );
 }
@@ -76,7 +80,7 @@ export function renderQuotes() {
         played with them all"
       </h3>
       <p>JONATHON BAYME, CEO OF THEORY11</p>
-      <button>Start free trial</button>
+      <button className="Button ButtonBottom">Start free trial</button>
     </div>
   );
 }
@@ -90,10 +94,10 @@ export function renderFooter() {
 }
 export default function Shopify() {
   return (
-    <div className="Wrapper">
+    <div className="Shopify">
       {renderHeader()}
       {renderFeatures()}
-      {renderLogos()}
+      {renderNewspapers()}
       {renderQuotes()}
       {renderFooter()}
     </div>
