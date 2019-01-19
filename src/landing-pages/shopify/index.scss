@@ -1,19 +1,22 @@
+@import "./fonts/index.scss";
+
 .Shopify {
-  background-color: white;
-  @font-face {
-    font-family: "FontShopify-Bold";
-    src: url("./fonts/ShopifySans--bold.woff2") format("woff2");
-    font-weight: 700;
-  }
-  @font-face {
-    font-family: "FontShopify-Medium";
-    src: url("./fonts/ShopifySans--medium.woff2") format("woff2");
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: "FontShopify-Regular";
-    src: url("./fonts/ShopifySans--regular.woff2") format("woff2");
-    font-weight: 400;
+  $primary-color: #5c6ac4;
+
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #637381;
+  font-weight: 400;
+  background: #ffffff;
+
+  .InputText {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    padding: 15px;
+    text-align: start;
   }
 
   .Button {
@@ -25,15 +28,18 @@
     font-size: 17px;
     margin-left: 4px;
     border-radius: 4px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
-  .ButtonStart {
+  .ButtonSecondary {
     background-color: #30373b;
   }
 
-  .ButtonBottom {
-    margin-top: 30px;
-    background-color: #5c6ac4;
+  .ButtonPrimary {
+    background-color: $primary-color;
   }
 
   .Header {
@@ -41,70 +47,50 @@
     text-align: center;
     background-image: url("./images/header-bg.jpg");
     background-size: 100% 100%;
+    padding: 0 20px;
 
-    .Logo svg {
-      width: 10%;
-      margin: 50px auto;
+    > * {
+      margin-top: 20px;
+    }
+
+    .Logo {
+      display: inline-block;
+      svg {
+        width: 120px;
+      }
     }
 
     .MainTitle {
-      margin: 0 auto;
       font-size: 3.75em;
       font-weight: 900;
-      font-family: "FontShopify-Bold", Helvetica, Arial, sans-serif;
     }
 
     .SubTitle {
-      margin: 5px auto;
       font-size: 2.25em;
       font-weight: 400;
-      font-family: "FontShopify-Medium", Helvetica, Arial, sans-serif;
     }
 
-    .BoxEmail {
-      margin-bottom: 40px;
-
-      .Email {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 15px auto;
-
-        .EnterEmail {
-          display: inline-block;
-          border-radius: 4px;
-          border: none;
-          font-size: 16px;
-          padding: 15px;
-          text-align: start;
-        }
-
-        .ButtonStart:hover {
-          background-color: #22272a;
-        }
+    .SubscribeEmail {
+      button:hover {
+        background-color: #22272a;
       }
     }
 
     .Laptop {
-      width: 50%;
+      width: 70%;
     }
   }
 
   .Features {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-size: 1em;
-    line-height: 1.5;
     color: #637381;
-    flex-wrap: wrap;
-    max-width: 60%;
-    margin: 80px auto;
+    padding: 0 20px;
+    margin-top: 50px;
 
     .BoxFeatures {
-      flex: 1;
-      max-width: 300px;
-      padding: 0px 5px;
+      max-width: 250px;
 
       svg {
         width: 40px;
@@ -112,47 +98,44 @@
       }
 
       h3 {
+        min-height: 60px;
+        font-weight: 700;
         color: #212b35;
-        font-family: "FontShopify-Regular", Helvetica, Arial, sans-serif;
       }
     }
   }
 
   .Newspapers {
-    padding: 0 15%;
-
+    margin: 0 auto;
+    padding: 70px 20px;
     img {
       width: 100%;
     }
   }
 
   .Quotes {
-    margin-top: 90px;
     text-align: center;
+    max-width: 700px;
 
     h3 {
       margin: 0 auto;
-      font-size: 1.75em;
+      font-size: 1.5em;
       font-weight: 700;
-      width: 80%;
-      max-width: 860px;
-      line-height: 1.5;
       color: #212b35;
     }
 
     p {
-      margin: 20px auto;
+      margin: 30px auto;
     }
 
-    .ButtonBottom:hover {
+    button:hover {
       background-color: #202e78;
     }
   }
 
   .Footer {
-    margin-top: 70px;
+    margin: 70px 0 20px;
     text-align: right;
-    margin-bottom: 25px;
 
     a {
       margin-right: 20px;
@@ -160,100 +143,57 @@
       color: #5c6ac4;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .Shopify {
+  @media (max-width: 768px) {
     .Header {
-      .Logo svg {
-        width: 20%;
-      }
-
-      .Laptop {
-        width: 70%;
-      }
-
+      padding: 0 10px;
       .MainTitle {
-        font-size: 1.7em;
+        font-size: 1.8em;
       }
 
       .SubTitle {
         font-size: 1.5em;
-        font-weight: 450;
+      }
+
+      .SubscribeEmail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button {
+          margin-top: 10px;
+        }
+      }
+
+      .Laptop {
+        width: 100%;
       }
     }
 
     .Features {
-      max-width: 95%;
-
+      flex-direction: column;
+      align-items: center;
       .BoxFeatures {
-        max-width: 80%;
-        margin: 0 15px;
-      }
-    }
-
-    .Newspapers {
-      display: none;
-    }
-
-    .Quotes {
-      h3 {
-        width: 80%;
-        font-size: 1.5em;
-        margin-bottom: 20px;
+        max-width: 100%;
+        margin: 30px 20px;
       }
     }
 
     .Footer {
-      display: flex;
-      flex-direction: column;
       text-align: center;
-
-      .TagBottom {
-        margin: 5px auto;
-      }
     }
   }
 }
 
-@media (max-width: 360px) {
-  .Shopify {
-    .Header {
-      .Logo svg {
-        width: 30%;
-      }
+@media (max-width: 999px) {
+  .Container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
 
-      .TextTry {
-        font-size: 0.8em;
-      }
-
-      .EnterEmail {
-        width: 88%;
-        text-align: center;
-      }
-
-      .Button {
-        flex-basis: 95%;
-        margin: 10px auto;
-      }
-
-      .Laptop {
-        width: 92%;
-      }
-    }
-
-    .Features {
-      display: block;
-
-      .BoxFeatures {
-        margin: 55px auto;
-      }
-    }
-
-    .Quotes {
-      h3 {
-        font-size: 1em;
-      }
-    }
+@media (min-width: 1000px) {
+  .Container {
+    max-width: 990px;
+    margin: 0 auto;
   }
 }
