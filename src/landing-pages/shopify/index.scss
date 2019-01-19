@@ -3,11 +3,19 @@
   @font-face {
     font-family: "FontShopify-Bold";
     src: url("./fonts/ShopifySans--bold.woff2") format("woff2");
+    font-weight: 700;
+  }
+  @font-face {
     font-family: "FontShopify-Medium";
     src: url("./fonts/ShopifySans--medium.woff2") format("woff2");
+    font-weight: 500;
+  }
+  @font-face {
     font-family: "FontShopify-Regular";
     src: url("./fonts/ShopifySans--regular.woff2") format("woff2");
+    font-weight: 400;
   }
+
   .Button {
     display: inline-block;
     border: none;
@@ -109,6 +117,7 @@
       }
     }
   }
+
   .Newspapers {
     padding: 0 15%;
 
