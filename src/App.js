@@ -1,14 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Shopify from "./landing-pages/shopify/index.js";
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Route path="/" component={Shopify} />
-      </Router>
-    );
-  }
-}
+import Home from "./home.js";
+
+const App = () => (
+  <Router>
+    <div>
+      <Route path="/" exact component={Home} />
+      <Route path="/shopify/" component={Shopify} />
+    </div>
+  </Router>
+);
 
 export default App;
