@@ -1,0 +1,271 @@
+.Scraftsman {
+  background: url("./images/bodybcg.jpg");
+
+  .Header {
+    overflow: hidden;
+    height: 125px;
+    padding: 20px;
+
+    .Logo {
+      width: 565px;
+      background: url("./images/logo-rope.png") no-repeat center top;
+      padding: 38px;
+
+      img {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  .Intro {
+    padding: 20px 0;
+
+    .Link {
+      margin: 0 auto;
+      background: url("images/intro.png") no-repeat center 20px;
+      height: 420px;
+      width: 673px;
+      position: relative;
+
+      .Linkedin:link {
+        width: 108px;
+        height: 33px;
+        position: absolute;
+        left: 45px;
+        top: 149px;
+      }
+
+      .Twitter:link {
+        width: 125px;
+        height: 32px;
+        position: absolute;
+        left: 38px;
+        top: 182px;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      background: url("images/intro-central-banner.png") no-repeat center top;
+      font-weight: 400;
+      color: #fff;
+      font-size: 31.5px;
+      padding: 20px 0 23px 0;
+      margin: 35px 0 0 0;
+    }
+  }
+
+  .Works {
+    background: url("images/works-bcg.jpg") repeat-x left top;
+    margin: 100px 0 0 0;
+
+    .ContainerScrafts {
+      background: url("images/works.png") no-repeat center 75px;
+      position: relative;
+
+      .Porfolio {
+        background: url("images/design-elements.png") no-repeat 0px -136px;
+        display: block;
+        width: 174px;
+        height: 174px;
+        position: absolute;
+
+        img {
+          margin: 7px;
+        }
+      }
+
+      .CraftsmanWorks {
+        overflow: hidden;
+        clear: both;
+
+        blockquote {
+          display: block;
+          width: 350px;
+          margin: 505px auto 79px auto;
+          line-height: 130%;
+          color: #333;
+          font-size: 18px;
+          padding: 2px 25px 2px 25px;
+          text-align: center;
+          position: relative;
+
+          span {
+            font-size: 54px;
+            color: #9e3322;
+            width: 13px;
+            height: 12px;
+            position: absolute;
+          }
+
+          .QuestionOpened {
+            left: 27px;
+            top: 10px;
+          }
+
+          .QuestionClosed {
+            right: 98px;
+            bottom: 8px;
+          }
+        }
+      }
+
+      .Left-f {
+        left: 90px;
+        top: 58px;
+      }
+
+      .Left-s {
+        left: 10px;
+        top: 253px;
+      }
+
+      .Left-t {
+        left: 90px;
+        top: 448px;
+      }
+
+      .Right-f {
+        right: 90px;
+        top: 58px;
+      }
+
+      .Right-s {
+        right: 10px;
+        top: 253px;
+      }
+
+      .Right-t {
+        right: 90px;
+        top: 448px;
+      }
+    }
+  }
+
+  .About {
+    overflow: hidden;
+    padding-top: 80px;
+
+    .ContainerScrafts {
+      .AboutSection {
+        display: flex;
+
+        .AboutImg {
+          width: 437px;
+          position: relative;
+        }
+
+        article {
+          margin: 0 0 80px 0;
+          overflow: hidden;
+
+          h2 {
+            color: #9e331f;
+            margin-bottom: 5px;
+            font-size: 38px;
+          }
+
+          p {
+            font-size: 19px;
+            margin: 15px 0 0 0;
+            line-height: 140%;
+          }
+
+          h3 {
+            color: #9e331f;
+            font-size: 30px;
+          }
+        }
+
+        article.Secondary {
+          width: 492px;
+        }
+
+        .GreatUX {
+          width: 455px;
+          height: 165px;
+          background: url("images/about-workflow.png") no-repeat center;
+          margin: 66px 0 0 0;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .Contact {
+    background: url("images/contact-bcg.jpg") repeat-x left top;
+    overflow: hidden;
+    padding: 60px 0 0 0;
+
+    .ContainerScrafts {
+      height: 450px;
+      background: url("images/contact.png") no-repeat right top;
+      position: relative;
+
+      .ContainerFrom {
+        display: flex;
+      }
+
+      .ContactForm {
+        width: 512px;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 50px;
+        margin-top: 7px;
+
+        input {
+          width: 431px;
+          height: 31px;
+          padding: 3px 15px 0 15px;
+          background: url("images/design-elements.png") no-repeat -174px 0px;
+          margin-bottom: 10px;
+          border: 0px;
+          color: #000000;
+        }
+
+        textarea {
+          width: 431px;
+          height: 155px;
+          padding: 9px 15px 0 15px;
+          background: url("images/design-elements.png") no-repeat -174px -102px;
+          resize: none;
+          border: 0px;
+          color: #000000;
+        }
+      }
+
+      .SkillsImg {
+        width: 209px;
+        margin: 45px 0px 0 250px;
+      }
+
+      p {
+        display: block;
+        clear: both;
+        padding: 80px 0 40px 0;
+      }
+    }
+  }
+
+  a,
+  a:link {
+    color: #9e3320;
+    outline: none;
+    text-decoration: none;
+  }
+
+  .Linkedin,
+  .Twitter {
+    display: block;
+    text-indent: -9999px;
+  }
+
+  @media (min-width: 981px) {
+    .ContainerScrafts {
+      max-width: 984px;
+      margin: 0 auto;
+      clear: both;
+    }
+  }
+}
