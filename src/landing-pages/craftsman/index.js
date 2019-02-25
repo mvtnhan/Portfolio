@@ -1,5 +1,8 @@
 import React from "react";
+import { Image, Popup } from "semantic-ui-react";
+import "semantic-ui-css/semantic.min.css";
 import "./scraftsman.scss";
+
 import Logo from "./images/logo.png";
 import LestHost from "./images/LetsHost.png";
 import FFVentureCapital from "./images/ffVentureCapital.png";
@@ -9,6 +12,8 @@ import Host365 from "./images/Host365.png";
 import MedievalWall from "./images/MedievalWall.png";
 import About from "./images/about.png";
 import Skills from "./images/skills.png";
+
+//import SmallIntro from "./images/intro-small.png";
 
 export function renderHeader() {
   return (
@@ -29,6 +34,7 @@ export function renderRightSide() {
 }
 
 export function renderIntro() {
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <section className="Intro">
       <div className="Link">
@@ -38,10 +44,43 @@ export function renderIntro() {
         <a className="Twitter" href="https://www.linkedin.com/in/mvtnhan/">
           Twitter
         </a>
+        <div className="NavLink" />
+        <li className="ClickMe">
+          <p>
+            <Popup
+              className="PopupoCraftsman"
+              trigger={
+                <Image href="#" className="NavClick">
+                  Find Out <em>More</em>
+                </Image>
+              }
+              content="Click to find out more"
+              position="top center"
+            />
+          </p>
+
+          <a class="MyWorks" href="#">
+            Contact Info
+          </a>
+          <a class="AboutMe" href="#">
+            My Works
+          </a>
+          <a class="ContactInfo" href="#">
+            About Me
+          </a>
+        </li>
+        {/* <Image
+          href="#"
+          className="NavClick"
+          onClick="circleMenu.init('navigation', 310)"
+        >
+          Find Out <em>More</em>
+        </Image> */}
       </div>
       <h2>I'm Marijan, Amsterdam based UX Designer working with Booking.com</h2>
     </section>
   );
+  /* eslint-enable jsx-a11y/anchor-is-valid */
 }
 
 export function renderWorks() {
@@ -108,6 +147,9 @@ export function renderWorks() {
         >
           <img src={MedievalWall} alt="img MedievalWall" />
         </a>
+        <a href="#" className="WorkMore">
+          <em>More</em>Works
+        </a>
         <div className="CraftsmanWorks">
           <blockquote>
             <span className="QuestionOpened">“</span>
@@ -130,6 +172,9 @@ export function renderAbout() {
       <div className="ContainerScrafts">
         <div className="AboutSection">
           <div className="AboutImg">
+            <a href="#" className="PhotoMore">
+              Craftsman <em>Photo</em>
+            </a>
             <img src={About} alt="Img About" width="427" height="375" />
           </div>
           <article className="Primary">
@@ -171,13 +216,55 @@ export function renderAbout() {
               <a href="#">Contact me</a>
             </p>
           </article>
-          <div className="GreatUX" />
+          <div className="GreatUX">
+            <ul>
+              <li className="First">
+                Defined
+                <em>Purpose</em>
+              </li>
+              <li className="Second">
+                Unique
+                <em>Design</em>
+              </li>
+              <li className="Third">
+                Quality
+                <em>Code</em>
+              </li>
+
+              <strong>Efficient Web Presence</strong>
+            </ul>
+            <p className="Conclusion">GreatUX</p>
+          </div>
         </div>
       </div>
     </div>
   );
   /* eslint-enable jsx-a11y/anchor-is-valid */
 }
+
+const sociallist = [
+  {
+    link: "http://mvtnhan@gmail.com",
+    img: "Email",
+    content: "mvtnhan@gmail.com"
+  },
+  {
+    link: "https://join.skype.com/invite/c2MTvJakdVJG",
+    img: "Skype",
+    content: "Skype"
+  },
+  {
+    link: "https://twitter.com/mvtnhan",
+    img: "Twitter",
+    content: "Twitter"
+  },
+  {
+    link: "https://www.linkedin.com/in/mvtnhan",
+    img: "Linkedin",
+    content: "Linkedin"
+  }
+];
+
 export function renderContact() {
   return (
     <section className="Contact">
@@ -198,11 +285,29 @@ export function renderContact() {
             <img src={Skills} alt="Img Skills" width="225" height="75" />
           </div>
         </div>
-        <p>Copyright © 2014 Web Craftsman. Contact Preferred Via:</p>
+        <div className="Footer">
+          <p>Copyright © 2014 Web Craftsman. Contact Preferred Via:</p>
+          <div className="IconFooter">
+            {sociallist.map(social => (
+              <>
+                {" "}
+                {/* eslint-disable-next-line */}
+                <a href={social.link} />
+                <Popup
+                  className="PopupoCraftsman"
+                  trigger={<Image className={social.img} />}
+                  content={social.content}
+                  position="top center"
+                />
+              </>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
 export default function Scraftsman() {
   return (
     <div className="Scraftsman">
