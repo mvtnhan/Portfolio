@@ -17,7 +17,7 @@ import Skills from "./images/skills.png";
 
 export function renderHeader() {
   return (
-    <div className="Header ContainerScrafts">
+    <div className="Header PageContainerScrafts">
       <h1 className="Logo">
         <img src={Logo} alt="Logo Web Craftsman" />
       </h1>
@@ -25,40 +25,22 @@ export function renderHeader() {
   );
 }
 
-export function renderRightSide() {
-  return (
-    <nav className="RightSide">
-      <p />
-    </nav>
-  );
-}
-
 export function renderIntro() {
   /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <section className="Intro">
-      <div className="Link">
+      <div className="ImgIntro">
         <a className="Linkedin" href="https://www.linkedin.com/in/mvtnhan/">
           Linkedin
         </a>
         <a className="Twitter" href="https://www.linkedin.com/in/mvtnhan/">
           Twitter
         </a>
-        <div className="NavLink" />
-        <li className="ClickMe">
-          <p>
-            <Popup
-              className="PopupoCraftsman"
-              trigger={
-                <Image href="#" className="NavClick">
-                  Find Out <em>More</em>
-                </Image>
-              }
-              content="Click to find out more"
-              position="top center"
-            />
-          </p>
-
+        <div className="AroundFindOutMe" />
+        <div className="FindOutMe">
+          <Image href="#" className="ImgFindOutMe">
+            Find Out <p>More</p>
+          </Image>
           <a class="MyWorks" href="#">
             Contact Info
           </a>
@@ -68,14 +50,7 @@ export function renderIntro() {
           <a class="ContactInfo" href="#">
             About Me
           </a>
-        </li>
-        {/* <Image
-          href="#"
-          className="NavClick"
-          onClick="circleMenu.init('navigation', 310)"
-        >
-          Find Out <em>More</em>
-        </Image> */}
+        </div>
       </div>
       <h2>I'm Marijan, Amsterdam based UX Designer working with Booking.com</h2>
     </section>
@@ -87,78 +62,42 @@ export function renderWorks() {
   /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <section className="Works">
-      <div className="ContainerScrafts">
-        <a
-          href="#"
-          className="Porfolio Left-f"
-          width="160"
-          height="160"
-          alt="img LetsHost"
-        >
-          <img src={LestHost} alt="img LesHost" />
+      <div className="PageContainerScrafts">
+        <a href="#" className="Left-top">
+          <img src={LestHost} alt="LesHost" />
         </a>
 
-        <a
-          href="#"
-          className="Porfolio Left-s"
-          width="160"
-          height="160"
-          alt="img LetsHost"
-        >
-          <img src={FFVentureCapital} alt="img ff VentureCapital" />
+        <a href="#" className="Left-mid">
+          <img src={FFVentureCapital} alt="ff VentureCapital" />
         </a>
 
-        <a
-          href="#"
-          className="Porfolio Left-t"
-          width="160"
-          height="160"
-          alt="img LetsHost"
-        >
-          <img src={RavenDB} alt="img RavenDB" />
+        <a href="#" className="Left-bot">
+          <img src={RavenDB} alt="RavenDB" />
         </a>
 
-        <a
-          href="#"
-          className="Porfolio Right-f"
-          width="160"
-          height="160"
-          alt="img LetsHost"
-        >
-          <img src={CloudVPS} alt="img CloudVPS" />
+        <a href="#" className="Right-top">
+          <img src={CloudVPS} alt="CloudVPS" />
         </a>
 
-        <a
-          href="#"
-          className="Porfolio Right-s"
-          width="160"
-          height="160"
-          alt="img LetsHost"
-        >
-          <img src={Host365} alt="img Host365" />
+        <a href="#" className="Right-mid">
+          <img src={Host365} alt="Host365" />
         </a>
 
-        <a
-          href="#"
-          className="Porfolio Right-t"
-          width="160"
-          height="160"
-          alt="img LetsHost"
-        >
-          <img src={MedievalWall} alt="img MedievalWall" />
+        <a href="#" className="Right-bot">
+          <img src={MedievalWall} alt="MedievalWall" />
         </a>
-        <a href="#" className="WorkMore">
+        <a href="#" className="ImgMoreWorks">
           <em>More</em>Works
         </a>
         <div className="CraftsmanWorks">
-          <blockquote>
+          <div className="TextAboutWorks">
             <span className="QuestionOpened">“</span>
             On every project my goal is to create an functional and consistent
             UX which serves its main purpose. I always check if every detail is
             in the right place and implemented according to the latest web
             standards.
             <span className="QuestionClosed">”</span>
-          </blockquote>
+          </div>
         </div>
       </div>
     </section>
@@ -169,15 +108,15 @@ export function renderAbout() {
   /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <div className="About">
-      <div className="ContainerScrafts">
+      <div className="PageContainerScrafts">
         <div className="AboutSection">
           <div className="AboutImg">
             <a href="#" className="PhotoMore">
               Craftsman <em>Photo</em>
             </a>
-            <img src={About} alt="Img About" width="427" height="375" />
+            <img src={About} alt="About" width="427" height="375" />
           </div>
-          <article className="Primary">
+          <article>
             <header>
               <h2>My Greetings & Handshake to You</h2>
               <p>
@@ -200,7 +139,7 @@ export function renderAbout() {
           </article>
         </div>
         <div className="AboutSection">
-          <article className="Secondary">
+          <article className="HardAndPlay">
             <header>
               <h3>I Work Hard and Play Hard</h3>
             </header>
@@ -220,15 +159,15 @@ export function renderAbout() {
             <ul>
               <li className="First">
                 Defined
-                <em>Purpose</em>
+                <p>Purpose</p>
               </li>
               <li className="Second">
                 Unique
-                <em>Design</em>
+                <p>Design</p>
               </li>
               <li className="Third">
                 Quality
-                <em>Code</em>
+                <p>Code</p>
               </li>
 
               <strong>Efficient Web Presence</strong>
@@ -242,7 +181,7 @@ export function renderAbout() {
   /* eslint-enable jsx-a11y/anchor-is-valid */
 }
 
-const sociallist = [
+const Sociallist = [
   {
     link: "http://mvtnhan@gmail.com",
     img: "Email",
@@ -268,7 +207,7 @@ const sociallist = [
 export function renderContact() {
   return (
     <section className="Contact">
-      <div className="ContainerScrafts">
+      <div className="PageContainerScrafts">
         <div className="ContainerFrom">
           <form className="ContactForm">
             <input type="text" name="Name" id="Name" placeholder="Name" />
@@ -282,13 +221,13 @@ export function renderContact() {
             />
           </form>
           <div className="SkillsImg">
-            <img src={Skills} alt="Img Skills" width="225" height="75" />
+            <img src={Skills} alt="Skills" width="225" height="75" />
           </div>
         </div>
         <div className="Footer">
           <p>Copyright © 2014 Web Craftsman. Contact Preferred Via:</p>
           <div className="IconFooter">
-            {sociallist.map(social => (
+            {Sociallist.map(social => (
               <>
                 {" "}
                 {/* eslint-disable-next-line */}
@@ -312,7 +251,6 @@ export default function Scraftsman() {
   return (
     <div className="Scraftsman">
       {renderHeader()}
-      {renderRightSide()}
       {renderIntro()}
       {renderWorks()}
       {renderAbout()}

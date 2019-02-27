@@ -40,7 +40,7 @@ $color-grey: #666666;
   .Intro {
     padding: 20px 0;
 
-    .Link {
+    .ImgIntro {
       margin: 0 auto;
       background: url("images/intro.png") no-repeat center 20px;
       height: 420px;
@@ -63,7 +63,7 @@ $color-grey: #666666;
         top: 182px;
       }
 
-      .NavLink {
+      .AroundFindOutMe {
         position: absolute;
         width: 190px;
         height: 190px;
@@ -87,12 +87,11 @@ $color-grey: #666666;
         }
       }
 
-      li {
-        width: 110px;
-        left: 544px;
-        bottom: 46px;
+      .FindOutMe {
+        width: 136px;
+        left: 543px;
+        bottom: 47px;
         text-align: center;
-        color: $color-while;
         position: relative;
 
         p {
@@ -131,7 +130,7 @@ $color-grey: #666666;
         }
       }
 
-      .NavClick {
+      .ImgFindOutMe {
         width: 136px;
         height: 138px;
         position: relative;
@@ -150,11 +149,12 @@ $color-grey: #666666;
           transform: rotate(0deg);
         }
 
-        em {
+        p {
           font-size: 40px;
           font-style: normal;
           line-height: 40px;
           letter-spacing: normal;
+          margin: 60px 0 0 10px;
         }
       }
     }
@@ -174,11 +174,11 @@ $color-grey: #666666;
     background: url("images/works-bcg.jpg") repeat-x left top;
     margin: 100px 0 0 0;
 
-    .ContainerScrafts {
+    .PageContainerScrafts {
       background: url("images/works.png") no-repeat center 75px;
       position: relative;
 
-      .Porfolio {
+      a {
         background: url("images/design-elements.png") no-repeat 0px -136px;
         display: block;
         width: 174px;
@@ -186,11 +186,13 @@ $color-grey: #666666;
         position: absolute;
 
         img {
+          width: 160px;
+          height: 160px;
           margin: 7px;
         }
       }
 
-      .WorkMore {
+      .ImgMoreWorks {
         position: absolute;
         left: 270px;
         bottom: 315px;
@@ -223,9 +225,9 @@ $color-grey: #666666;
         overflow: hidden;
         clear: both;
 
-        blockquote {
+        .TextAboutWorks {
           display: block;
-          width: 350px;
+          width: 446px;
           margin: 505px auto 79px auto;
           line-height: 130%;
           color: #333333;
@@ -243,43 +245,43 @@ $color-grey: #666666;
           }
 
           .QuestionOpened {
-            left: 10px;
+            left: 4px;
             top: 8px;
           }
 
           .QuestionClosed {
-            right: 127px;
+            right: 27px;
             bottom: 9px;
           }
         }
       }
 
-      .Left-f {
+      .Left-top {
         left: 90px;
         top: 58px;
       }
 
-      .Left-s {
+      .Left-mid {
         left: 10px;
         top: 253px;
       }
 
-      .Left-t {
+      .Left-bot {
         left: 90px;
         top: 448px;
       }
 
-      .Right-f {
+      .Right-top {
         right: 90px;
         top: 58px;
       }
 
-      .Right-s {
+      .Right-mid {
         right: 10px;
         top: 253px;
       }
 
-      .Right-t {
+      .Right-bot {
         right: 90px;
         top: 448px;
       }
@@ -290,7 +292,7 @@ $color-grey: #666666;
     overflow: hidden;
     padding-top: 80px;
 
-    .ContainerScrafts {
+    .PageContainerScrafts {
       .AboutSection {
         display: flex;
 
@@ -345,7 +347,7 @@ $color-grey: #666666;
           }
         }
 
-        .Secondary {
+        .HardAndPlay {
           width: 492px;
         }
 
@@ -365,7 +367,7 @@ $color-grey: #666666;
               font-size: 22px;
               width: 100px;
 
-              em {
+              p {
                 display: block;
                 clear: both;
                 font-style: normal;
@@ -412,7 +414,7 @@ $color-grey: #666666;
     overflow: hidden;
     padding: 60px 0 0 0;
 
-    .ContainerScrafts {
+    .PageContainerScrafts {
       height: 450px;
       background: url("images/contact.png") no-repeat right top;
       position: relative;
@@ -526,13 +528,13 @@ $color-grey: #666666;
     text-indent: -9999px;
   }
 
-  .ContainerScrafts {
+  .PageContainerScrafts {
     max-width: 984px;
     margin: 0 auto;
     clear: both;
   }
   @media (max-width: 980px) {
-    .ContainerScrafts {
+    .PageContainerScrafts {
       width: 768px;
     }
 
@@ -544,7 +546,7 @@ $color-grey: #666666;
     }
 
     .Works {
-      .ContainerScrafts {
+      .PageContainerScrafts {
         background-size: 245px auto;
 
         .CraftsmanWorks blockquote {
