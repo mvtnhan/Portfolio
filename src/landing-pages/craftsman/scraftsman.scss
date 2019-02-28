@@ -1,20 +1,38 @@
+@import "./fonts/index.scss";
+
 $color-nau-do: #9e3320;
 $color-red-article: #9e331f;
 $color-while: #ffffff;
 $color-grey: #666666;
-.PopupoCraftsman {
+
+.TooltipCraftsman {
   background-color: $color-nau-do !important;
   border: 0 !important;
   color: $color-while !important;
   padding: 5px 10px !important;
+
   &:before {
     background-color: $color-nau-do !important;
+  }
+  .content {
+    line-height: 15px;
+    font-size: 89%;
   }
 }
 
 .Scraftsman {
-  background: url("./images/bodybcg.jpg");
+  @mixin ImgDesign($a, $b) {
+    background: url("images/DesignElements.png") no-repeat $a $b;
+  }
 
+  @mixin ImgLink($a, $b, $c, $d) {
+    background: url("images/DesignElements.png") no-repeat $a $b;
+    &:hover {
+      background: url("images/DesignElements.png") no-repeat $c $d;
+    }
+  }
+
+  background: url("./images/Bodybg.jpg");
   .Header {
     overflow: hidden;
     height: 125px;
@@ -22,7 +40,7 @@ $color-grey: #666666;
 
     .Logo {
       width: 565px;
-      background: url("./images/logo-rope.png") no-repeat center top;
+      background: url("./images/LogoRope.png") no-repeat center top;
       padding: 38px;
       position: absolute;
 
@@ -39,10 +57,10 @@ $color-grey: #666666;
 
   .Intro {
     padding: 20px 0;
-
-    .ImgIntro {
+    font-family: Craftsmans, Arial, sans-serif;
+    .ImgScraftsman {
       margin: 0 auto;
-      background: url("images/intro.png") no-repeat center 20px;
+      background: url("images/Intro.png") no-repeat center 20px;
       height: 420px;
       width: 673px;
       position: relative;
@@ -63,11 +81,11 @@ $color-grey: #666666;
         top: 182px;
       }
 
-      .AroundFindOutMe {
+      .AroundFindOutMore {
         position: absolute;
         width: 190px;
         height: 190px;
-        background: url("images/design-elements.png") no-repeat 0px -430px;
+        @include ImgDesign(0px, -430px);
         left: 515px;
         bottom: 303px;
         transition-property: transform;
@@ -87,15 +105,17 @@ $color-grey: #666666;
         }
       }
 
-      .FindOutMe {
+      .FindOutMore {
         width: 136px;
         left: 543px;
-        bottom: 47px;
+        bottom: 62px;
         text-align: center;
         position: relative;
 
-        p {
-          top: 0;
+        span {
+          top: 60px;
+          font-size: 47px;
+          left: 18px;
           position: absolute;
           transition: all 0.4s ease-in-out 0s;
         }
@@ -115,18 +135,18 @@ $color-grey: #666666;
         }
 
         &:hover .MyWorks {
-          left: -30px;
-          top: 110px;
+          left: -40px;
+          top: -73px;
         }
 
         &:hover .AboutMe {
-          left: -30px;
-          top: -70px;
+          left: 125px;
+          top: 18px;
         }
 
         &:hover .ContactInfo {
-          left: 125px;
-          top: 17px;
+          left: -40px;
+          top: 112px;
         }
       }
 
@@ -134,14 +154,14 @@ $color-grey: #666666;
         width: 136px;
         height: 138px;
         position: relative;
-        background: url("images/design-elements.png") no-repeat 0px 0px;
+        @include ImgDesign(0px, 0px);
         text-transform: uppercase;
         color: $color-while;
         font-size: 25px;
         text-align: center;
-        line-height: 30px;
         padding: 29px 0 0 0;
         letter-spacing: 0px;
+        font-weight: 300;
         transform: rotate(-15deg);
         transition: transform 1s;
         z-index: 1;
@@ -161,7 +181,7 @@ $color-grey: #666666;
 
     h2 {
       text-align: center;
-      background: url("images/intro-central-banner.png") no-repeat center top;
+      background: url("images/IntroCentralBanner.png") no-repeat center top;
       font-weight: 400;
       color: $color-while;
       font-size: 31.5px;
@@ -170,16 +190,18 @@ $color-grey: #666666;
     }
   }
 
-  .Works {
-    background: url("images/works-bcg.jpg") repeat-x left top;
+  .MoreWorks {
+    background: url("images/Worksbg.jpg") repeat-x left top;
     margin: 100px 0 0 0;
+    font-family: Craftsmans, Arial, sans-serif;
 
-    .PageContainerScrafts {
-      background: url("images/works.png") no-repeat center 75px;
+    .Container {
+      height: 685px;
+      background: url("images/Works.png") no-repeat center 75px;
       position: relative;
 
       a {
-        background: url("images/design-elements.png") no-repeat 0px -136px;
+        @include ImgDesign(0px, -136px);
         display: block;
         width: 174px;
         height: 174px;
@@ -198,130 +220,125 @@ $color-grey: #666666;
         bottom: 315px;
         width: 103px;
         height: 106px;
+        font-weight: 300;
         display: block;
         color: $color-while;
         text-transform: uppercase;
-        background: url(images/design-elements.png) no-repeat 0px -310px;
+        @include ImgDesign(0px, -310px);
         transition: transform 1s;
         overflow: hidden;
         transform: rotate(0deg);
         line-height: 28px;
         padding: 24px 0 0 0;
         text-align: center;
-        font-size: 24px;
+        font-size: 30px;
         &:hover {
           transform: rotate(-15deg);
         }
 
         em {
-          font-size: 24px;
+          font-size: 32px;
           letter-spacing: 4px;
           clear: both;
           display: block;
         }
       }
 
-      .CraftsmanWorks {
-        overflow: hidden;
-        clear: both;
-
-        .TextAboutWorks {
-          display: block;
-          width: 446px;
-          margin: 505px auto 79px auto;
-          line-height: 130%;
-          color: #333333;
-          font-size: 18px;
-          padding: 2px 25px 2px 25px;
-          text-align: center;
-          position: relative;
-
-          span {
-            font-size: 40px;
-            color: #9e3322;
-            width: 13px;
-            height: 12px;
-            position: absolute;
-          }
-
-          .QuestionOpened {
-            left: 4px;
-            top: 8px;
-          }
-
-          .QuestionClosed {
-            right: 27px;
-            bottom: 9px;
-          }
-        }
+      span {
+        font-size: 40px;
+        color: #9e3322;
+        width: 13px;
+        height: 12px;
+        position: absolute;
+      }
+      .QuestionOpened {
+        left: 300px;
+        top: 500px;
       }
 
-      .Left-top {
+      .QuestionClosed {
+        right: 350px;
+        bottom: 105px;
+      }
+      p {
+        text-align: center;
+        margin: 505px auto auto 308px;
+        position: absolute;
+        color: #333333;
+        width: 375px;
+        font-size: 18px;
+        line-height: 130%;
+      }
+
+      .LeftTop {
         left: 90px;
         top: 58px;
       }
 
-      .Left-mid {
+      .LeftMid {
         left: 10px;
         top: 253px;
       }
 
-      .Left-bot {
+      .LeftBot {
         left: 90px;
         top: 448px;
       }
 
-      .Right-top {
+      .RightTop {
         right: 90px;
         top: 58px;
       }
 
-      .Right-mid {
+      .RightMid {
         right: 10px;
         top: 253px;
       }
 
-      .Right-bot {
+      .RightBot {
         right: 90px;
         top: 448px;
       }
     }
   }
 
-  .About {
+  .CraftmansPhoto {
     overflow: hidden;
     padding-top: 80px;
 
-    .PageContainerScrafts {
+    .Container {
       .AboutSection {
         display: flex;
+        position: relative;
 
-        .AboutImg {
-          width: 437px;
-          position: relative;
-
-          .PhotoMore {
-            font-size: 19px;
-            padding-top: 28px;
-            width: 103px;
-            height: 106px;
-            left: 15px;
-            top: 27px;
-            position: absolute;
+        .PhotoMore {
+          font-family: Craftsmans, Arial, sans-serif;
+          left: 15px;
+          top: 15px;
+          font-size: 20px;
+          width: 100px;
+          height: 101px;
+          font-weight: 300;
+          display: block;
+          position: absolute;
+          color: #fff;
+          text-transform: uppercase;
+          @include ImgDesign(0px, -310px);
+          border: 0px;
+          transition: transform 1s;
+          overflow: hidden;
+          transform: rotate(0deg);
+          line-height: 28px;
+          padding: 24px 0 0 0;
+          text-align: center;
+          &:hover {
+            transform: rotate(-15deg);
+          }
+          em {
+            font-size: 30px;
+            letter-spacing: 2px;
+            clear: both;
             display: block;
-            color: $color-while;
-            text-transform: uppercase;
-            background: url(images/design-elements.png) no-repeat 0px -310px;
-            border: 0px;
-            transition: transform 1s;
-            overflow: hidden;
-            transform: rotate(0deg);
-            line-height: 28px;
-            padding: 24px 0 0 0;
-            text-align: center;
-            &:hover {
-              transform: rotate(-15deg);
-            }
           }
         }
 
@@ -348,61 +365,44 @@ $color-grey: #666666;
         }
 
         .HardAndPlay {
-          width: 492px;
+          width: 513px;
         }
 
         .GreatUX {
           width: 455px;
           height: 165px;
-          background: url("images/about-workflow.png") no-repeat left;
-          margin: 66px 0 0 20px;
+          background: url("images/AboutWorkFlow.png") no-repeat left;
+          margin: 20px 0 0 5px;
           position: relative;
+          display: flex;
+          padding-left: 6px;
 
-          ul {
-            display: flex;
+          a {
             margin-top: 50px;
-
-            li {
-              color: $color-while;
-              font-size: 22px;
-              width: 100px;
-
-              p {
-                display: block;
-                clear: both;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 20px;
-              }
-            }
-
-            strong {
-              font-size: 20px;
-              color: $color-grey;
-              font-weight: 400;
-              width: 115px;
-              height: 50px;
-              position: absolute;
-              right: 0px;
-              top: 40px;
-              text-align: center;
-              line-height: 110%;
-            }
-
-            li.First {
-              margin-left: 20px;
-            }
-
-            li.Second {
-              margin-left: 0;
-            }
+            color: #ffffff;
+            font-size: 22px;
+            margin: 50px 13px;
           }
-
-          p.Conclusion {
+          span {
+            display: block;
+          }
+          strong {
+            font-size: 20px;
+            color: $color-grey;
+            font-weight: 400;
+            width: 115px;
+            height: 50px;
+            position: absolute;
+            right: 0px;
+            top: 50px;
+            text-align: center;
+            line-height: 110%;
+          }
+          .Conclusion {
             clear: both;
             font-size: 22px;
             color: $color-grey;
-            margin: 70px 0 0 120px;
+            margin: 159px 0 0 -179px;
           }
         }
       }
@@ -410,107 +410,126 @@ $color-grey: #666666;
   }
 
   .Contact {
-    background: url("images/contact-bcg.jpg") repeat-x left top;
+    background: url("images/Contactbg.jpg") repeat-x left top;
     overflow: hidden;
     padding: 60px 0 0 0;
 
-    .PageContainerScrafts {
-      height: 450px;
-      background: url("images/contact.png") no-repeat right top;
+    height: 460px;
+
+    .FromContact {
+      display: flex;
       position: relative;
 
-      .ContainerFrom {
-        display: flex;
+      form {
+        width: 512px;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 50px;
+        margin-top: 7px;
 
-        .ContactForm {
-          width: 512px;
-          position: relative;
-          overflow: hidden;
-          padding-bottom: 50px;
-          margin-top: 7px;
-
-          input,
-          textarea {
-            border: 0px;
-            outline: 0;
-            border-radius: 15px;
-            color: #000000;
-          }
-
-          input {
-            width: 431px;
-            height: 31px;
-            padding: 3px 15px 0 15px;
-            background: url("images/design-elements.png") no-repeat -174px 0px;
-            margin-bottom: 10px;
-          }
-
-          textarea {
-            width: 431px;
-            height: 155px;
-            padding: 9px 15px 0 15px;
-            background: url("images/design-elements.png") no-repeat -174px -102px;
-            resize: none;
-          }
+        input,
+        textarea {
+          border: 0px;
+          outline: 0;
+          border-radius: 15px;
+          color: #000000;
         }
 
-        .SkillsImg {
-          width: 209px;
-          margin: 45px 0px 0 250px;
+        input {
+          width: 431px;
+          height: 31px;
+          padding: 3px 15px 0 15px;
+          @include ImgDesign(-174px, 0px);
+          margin-bottom: 10px;
+        }
+
+        textarea {
+          width: 431px;
+          height: 155px;
+          padding: 9px 15px 0 15px;
+          @include ImgDesign(-174px, -102px);
+          resize: none;
         }
       }
 
-      .Footer {
-        margin-top: 70px;
-        display: flex;
-        flex-direction: row;
-
-        p {
-          width: 375px;
-          margin-top: 7px;
+      .ImgSendMessage {
+        font-family: Craftsmans, Arial, sans-serif;
+        left: 380px;
+        bottom: 10px;
+        font-size: 25px;
+        width: 100px;
+        height: 101px;
+        font-weight: 300;
+        display: block;
+        position: absolute;
+        color: #fff;
+        text-transform: uppercase;
+        @include ImgDesign(0px, -310px);
+        border: 0px;
+        transition: transform 1s;
+        overflow: hidden;
+        transform: rotate(0deg);
+        line-height: 28px;
+        padding: 24px 0 0 0;
+        text-align: center;
+        &:hover {
+          transform: rotate(15deg);
         }
-
-        .IconFooter {
-          display: flex;
-
-          a {
-            margin-right: 5px;
-          }
-
-          img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-          }
-
-          .Email {
-            background: url("images/design-elements.png") no-repeat -191px -430px;
-            &:hover {
-              background: url("images/design-elements.png") no-repeat -191px -462px;
-            }
-          }
-
-          .Skype {
-            background: url("images/design-elements.png") no-repeat -223px -430px;
-            &:hover {
-              background: url("images/design-elements.png") no-repeat -223px -462px;
-            }
-          }
-
-          .Twitter {
-            background: url("images/design-elements.png") no-repeat -255px -430px;
-            &:hover {
-              background: url("images/design-elements.png") no-repeat -255px -462px;
-            }
-          }
-
-          .Linkedin {
-            background: url("images/design-elements.png") no-repeat -287px -430px;
-            &:hover {
-              background: url("images/design-elements.png") no-repeat -287px -462px;
-            }
-          }
+        em {
+          font-size: 30px;
+          letter-spacing: 5px;
+          clear: both;
+          display: block;
+          padding-left: 5px;
         }
+      }
+
+      .SkillsImg {
+        width: 200px;
+        position: absolute;
+        right: 80px;
+      }
+      .ContactImg {
+        top: 0px;
+        right: 40px;
+        //background: url("images/Contact.png") no-repeat right top;
+        position: absolute;
+      }
+    }
+  }
+
+  .Footer {
+    display: flex;
+    height: 60px;
+    p {
+      width: 375px;
+      margin-top: 7px;
+    }
+
+    .IconFooter {
+      display: flex;
+
+      a {
+        margin-right: 5px;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      .Email {
+        @include ImgLink(-191px, -430px, -191px, -462px);
+      }
+      .Skype {
+        @include ImgLink(-223px, -430px, -223px, -462px);
+      }
+      .Twitter {
+        @include ImgLink(-255px, -430px, -255px, -462px);
+      }
+      .Linkedin {
+        @include ImgLink(-287px, -430px, -287px, -462px);
       }
     }
   }
@@ -528,13 +547,13 @@ $color-grey: #666666;
     text-indent: -9999px;
   }
 
-  .PageContainerScrafts {
+  .Container {
     max-width: 984px;
     margin: 0 auto;
     clear: both;
   }
   @media (max-width: 980px) {
-    .PageContainerScrafts {
+    .Container {
       width: 768px;
     }
 
@@ -545,34 +564,147 @@ $color-grey: #666666;
       margin-top: 25px;
     }
 
-    .Works {
-      .PageContainerScrafts {
+    .MoreWorks {
+      .Container {
         background-size: 245px auto;
+        .ImgMoreWorks {
+          left: 200px;
+          bottom: 350px;
+        }
 
-        .CraftsmanWorks blockquote {
-          width: 200px;
-          margin-top: 420px;
-          margin-bottom: 100px;
+        .QuestionOpened {
+          left: 270px;
+          top: 430px;
+        }
 
-          .QuestionOpened {
-            left: 10px;
-            font-size: 45px;
-          }
-
-          .QuestionClosed {
-            right: 17px;
-            font-size: 45px;
-          }
+        .QuestionClosed {
+          right: 285px;
+          bottom: 110px;
+        }
+        p {
+          text-align: center;
+          margin: 430px auto auto 280px;
+          position: absolute;
+          color: #333333;
+          width: 210px;
+          font-size: 18px;
+          line-height: 130%;
         }
       }
     }
 
-    .About {
-      .AboutImg {
-        width: 355px;
+    .CraftmansPhoto {
+      img {
+        display: block;
+        width: 330px;
+        height: 330px;
+      }
+      h2 {
+        font-size: 30px !important;
+      }
+      p {
+        font-size: 17px !important;
+      }
+      .AboutSection {
+        .HardAndPlay {
+          width: 360px !important;
+        }
+        strong {
+          right: -30px !important;
+        }
+      }
+    }
+
+    .Contact {
+      .SkillsImg {
+        display: none;
+      }
+      .ContactImg {
+        top: -20px !important;
+        right: 30px !important;
+        width: 300px;
+        height: 260px;
       }
     }
   }
-  @media (max-width: 527px) {
+  @media (max-width: 860px) {
+    .Container {
+      width: 580px;
+    }
+    .Header {
+      display: none;
+    }
+    .Intro {
+      .ImgScraftsman {
+        background: url("images/IntroSmall.png") no-repeat center 20px;
+        height: 320px;
+        width: 320px;
+        .AroundFindOutMore {
+          top: 200px;
+          left: 10px;
+        }
+        .FindOutMore {
+          left: 40px;
+          top: 210px;
+        }
+      }
+      h2 {
+        display: none;
+      }
+    }
+
+    .MoreWorks {
+      .Container {
+        background: none;
+        .ImgMoreWorks {
+          left: 240px;
+          bottom: 290px;
+        }
+
+        .QuestionOpened,
+        .QuestionClosed,
+        p {
+          display: none;
+        }
+      }
+    }
+
+    .CraftmansPhoto {
+      img,
+      .PhotoMore,
+      .GreatUX {
+        display: none !important;
+      }
+      h2 {
+        font-size: 30px !important;
+      }
+      p {
+        font-size: 17px !important;
+      }
+      .AboutSection {
+        padding: 10px;
+        .HardAndPlay {
+          width: 760px !important;
+        }
+        strong {
+          right: -30px !important;
+        }
+      }
+    }
+
+    .Contact {
+      .SkillsImg {
+        display: none;
+      }
+      .ContactImg {
+        display: none;
+      }
+      .FromContact {
+        margin-left: 60px;
+      }
+    }
+    .Footer {
+      margin-left: 20px;
+    }
   }
 }
