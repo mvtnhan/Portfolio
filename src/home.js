@@ -7,6 +7,8 @@ export default function Home() {
       <span>Wellcome to my Website</span>
       <br />
       <Link to="/shopify">Shopify</Link>
+      <br />
+      <Link to="/craftsman">Sraftsman</Link>
     </div>
   );
 }

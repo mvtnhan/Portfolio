@@ -1,0 +1,710 @@
+@import "./fonts/index.scss";
+
+$color-nau-do: #9e3320;
+$color-red-article: #9e331f;
+$color-while: #ffffff;
+$color-grey: #666666;
+
+.TooltipCraftsman {
+  background-color: $color-nau-do !important;
+  border: 0 !important;
+  color: $color-while !important;
+  padding: 5px 10px !important;
+
+  &:before {
+    background-color: $color-nau-do !important;
+  }
+  .content {
+    line-height: 15px;
+    font-size: 89%;
+  }
+}
+
+.Scraftsman {
+  @mixin ImgDesign($a, $b) {
+    background: url("images/DesignElements.png") no-repeat $a $b;
+  }
+
+  @mixin ImgLink($a, $b, $c, $d) {
+    background: url("images/DesignElements.png") no-repeat $a $b;
+    &:hover {
+      background: url("images/DesignElements.png") no-repeat $c $d;
+    }
+  }
+
+  background: url("./images/Bodybg.jpg");
+  .Header {
+    overflow: hidden;
+    height: 125px;
+    padding: 20px;
+
+    .Logo {
+      width: 565px;
+      background: url("./images/LogoRope.png") no-repeat center top;
+      padding: 38px;
+      position: absolute;
+
+      img {
+        padding: 0;
+        margin: 0;
+        transition: transform 1s;
+        &:hover {
+          transform: rotate(1.9deg);
+        }
+      }
+    }
+  }
+
+  .Intro {
+    padding: 20px 0;
+    font-family: Craftsmans, Arial, sans-serif;
+    .ImgScraftsman {
+      margin: 0 auto;
+      background: url("images/Intro.png") no-repeat center 20px;
+      height: 420px;
+      width: 673px;
+      position: relative;
+
+      .Linkedin:link {
+        width: 108px;
+        height: 33px;
+        position: absolute;
+        left: 45px;
+        top: 149px;
+      }
+
+      .Twitter:link {
+        width: 125px;
+        height: 32px;
+        position: absolute;
+        left: 38px;
+        top: 182px;
+      }
+
+      .AroundFindOutMore {
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        @include ImgDesign(0px, -430px);
+        left: 515px;
+        bottom: 303px;
+        transition-property: transform;
+        transition-duration: 1s;
+        animation-name: rotate;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .FindOutMore {
+        width: 136px;
+        left: 543px;
+        bottom: 62px;
+        text-align: center;
+        position: relative;
+
+        span {
+          top: 60px;
+          font-size: 47px;
+          left: 18px;
+          position: absolute;
+          transition: all 0.4s ease-in-out 0s;
+        }
+
+        a {
+          left: 18px;
+          top: 18px;
+          height: 100px;
+          width: 100px;
+          position: absolute;
+          transition: all 0.4s ease-in-out 0s;
+          background-color: $color-nau-do;
+          color: $color-while;
+          font-size: 20px;
+          border-radius: 50%;
+          padding: 37px 0;
+        }
+
+        &:hover .MyWorks {
+          left: -40px;
+          top: -73px;
+        }
+
+        &:hover .AboutMe {
+          left: 125px;
+          top: 18px;
+        }
+
+        &:hover .ContactInfo {
+          left: -40px;
+          top: 112px;
+        }
+      }
+
+      .ImgFindOutMe {
+        width: 136px;
+        height: 138px;
+        position: relative;
+        @include ImgDesign(0px, 0px);
+        text-transform: uppercase;
+        color: $color-while;
+        font-size: 25px;
+        text-align: center;
+        padding: 29px 0 0 0;
+        letter-spacing: 0px;
+        font-weight: 300;
+        transform: rotate(-15deg);
+        transition: transform 1s;
+        z-index: 1;
+        &:hover {
+          transform: rotate(0deg);
+        }
+
+        p {
+          font-size: 40px;
+          font-style: normal;
+          line-height: 40px;
+          letter-spacing: normal;
+          margin: 60px 0 0 10px;
+        }
+      }
+    }
+
+    h2 {
+      text-align: center;
+      background: url("images/IntroCentralBanner.png") no-repeat center top;
+      font-weight: 400;
+      color: $color-while;
+      font-size: 31.5px;
+      padding: 20px 0 34px 0;
+      margin: 35px 0 0 0;
+    }
+  }
+
+  .MoreWorks {
+    background: url("images/Worksbg.jpg") repeat-x left top;
+    margin: 100px 0 0 0;
+    font-family: Craftsmans, Arial, sans-serif;
+
+    .Container {
+      height: 685px;
+      background: url("images/Works.png") no-repeat center 75px;
+      position: relative;
+
+      a {
+        @include ImgDesign(0px, -136px);
+        display: block;
+        width: 174px;
+        height: 174px;
+        position: absolute;
+
+        img {
+          width: 160px;
+          height: 160px;
+          margin: 7px;
+        }
+      }
+
+      .ImgMoreWorks {
+        position: absolute;
+        left: 270px;
+        bottom: 315px;
+        width: 103px;
+        height: 106px;
+        font-weight: 300;
+        display: block;
+        color: $color-while;
+        text-transform: uppercase;
+        @include ImgDesign(0px, -310px);
+        transition: transform 1s;
+        overflow: hidden;
+        transform: rotate(0deg);
+        line-height: 28px;
+        padding: 24px 0 0 0;
+        text-align: center;
+        font-size: 30px;
+        &:hover {
+          transform: rotate(-15deg);
+        }
+
+        em {
+          font-size: 32px;
+          letter-spacing: 4px;
+          clear: both;
+          display: block;
+        }
+      }
+
+      span {
+        font-size: 40px;
+        color: #9e3322;
+        width: 13px;
+        height: 12px;
+        position: absolute;
+      }
+      .QuestionOpened {
+        left: 300px;
+        top: 500px;
+      }
+
+      .QuestionClosed {
+        right: 350px;
+        bottom: 105px;
+      }
+      p {
+        text-align: center;
+        margin: 505px auto auto 308px;
+        position: absolute;
+        color: #333333;
+        width: 375px;
+        font-size: 18px;
+        line-height: 130%;
+      }
+
+      .LeftTop {
+        left: 90px;
+        top: 58px;
+      }
+
+      .LeftMid {
+        left: 10px;
+        top: 253px;
+      }
+
+      .LeftBot {
+        left: 90px;
+        top: 448px;
+      }
+
+      .RightTop {
+        right: 90px;
+        top: 58px;
+      }
+
+      .RightMid {
+        right: 10px;
+        top: 253px;
+      }
+
+      .RightBot {
+        right: 90px;
+        top: 448px;
+      }
+    }
+  }
+
+  .CraftmansPhoto {
+    overflow: hidden;
+    padding-top: 80px;
+
+    .Container {
+      .AboutSection {
+        display: flex;
+        position: relative;
+
+        .PhotoMore {
+          font-family: Craftsmans, Arial, sans-serif;
+          left: 15px;
+          top: 15px;
+          font-size: 20px;
+          width: 100px;
+          height: 101px;
+          font-weight: 300;
+          display: block;
+          position: absolute;
+          color: #fff;
+          text-transform: uppercase;
+          @include ImgDesign(0px, -310px);
+          border: 0px;
+          transition: transform 1s;
+          overflow: hidden;
+          transform: rotate(0deg);
+          line-height: 28px;
+          padding: 24px 0 0 0;
+          text-align: center;
+          &:hover {
+            transform: rotate(-15deg);
+          }
+          em {
+            font-size: 30px;
+            letter-spacing: 2px;
+            clear: both;
+            display: block;
+          }
+        }
+
+        article {
+          margin: 0 0 80px 0;
+          overflow: hidden;
+
+          h2 {
+            color: $color-red-article;
+            margin-bottom: 5px;
+            font-size: 38px;
+          }
+
+          p {
+            font-size: 19px;
+            margin: 15px 0 0 0;
+            line-height: 140%;
+          }
+
+          h3 {
+            color: $color-red-article;
+            font-size: 30px;
+          }
+        }
+
+        .HardAndPlay {
+          width: 513px;
+        }
+
+        .GreatUX {
+          width: 455px;
+          height: 165px;
+          background: url("images/AboutWorkFlow.png") no-repeat left;
+          margin: 20px 0 0 5px;
+          position: relative;
+          display: flex;
+          padding-left: 6px;
+
+          a {
+            margin-top: 50px;
+            color: #ffffff;
+            font-size: 22px;
+            margin: 50px 13px;
+          }
+          span {
+            display: block;
+          }
+          strong {
+            font-size: 20px;
+            color: $color-grey;
+            font-weight: 400;
+            width: 115px;
+            height: 50px;
+            position: absolute;
+            right: 0px;
+            top: 50px;
+            text-align: center;
+            line-height: 110%;
+          }
+          .Conclusion {
+            clear: both;
+            font-size: 22px;
+            color: $color-grey;
+            margin: 159px 0 0 -179px;
+          }
+        }
+      }
+    }
+  }
+
+  .Contact {
+    background: url("images/Contactbg.jpg") repeat-x left top;
+    overflow: hidden;
+    padding: 60px 0 0 0;
+
+    height: 460px;
+
+    .FromContact {
+      display: flex;
+      position: relative;
+
+      form {
+        width: 512px;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 50px;
+        margin-top: 7px;
+
+        input,
+        textarea {
+          border: 0px;
+          outline: 0;
+          border-radius: 15px;
+          color: #000000;
+        }
+
+        input {
+          width: 431px;
+          height: 31px;
+          padding: 3px 15px 0 15px;
+          @include ImgDesign(-174px, 0px);
+          margin-bottom: 10px;
+        }
+
+        textarea {
+          width: 431px;
+          height: 155px;
+          padding: 9px 15px 0 15px;
+          @include ImgDesign(-174px, -102px);
+          resize: none;
+        }
+      }
+
+      .ImgSendMessage {
+        font-family: Craftsmans, Arial, sans-serif;
+        left: 380px;
+        bottom: 10px;
+        font-size: 25px;
+        width: 100px;
+        height: 101px;
+        font-weight: 300;
+        display: block;
+        position: absolute;
+        color: #fff;
+        text-transform: uppercase;
+        @include ImgDesign(0px, -310px);
+        border: 0px;
+        transition: transform 1s;
+        overflow: hidden;
+        transform: rotate(0deg);
+        line-height: 28px;
+        padding: 24px 0 0 0;
+        text-align: center;
+        &:hover {
+          transform: rotate(15deg);
+        }
+        em {
+          font-size: 30px;
+          letter-spacing: 5px;
+          clear: both;
+          display: block;
+          padding-left: 5px;
+        }
+      }
+
+      .SkillsImg {
+        width: 200px;
+        position: absolute;
+        right: 80px;
+      }
+      .ContactImg {
+        top: 0px;
+        right: 40px;
+        //background: url("images/Contact.png") no-repeat right top;
+        position: absolute;
+      }
+    }
+  }
+
+  .Footer {
+    display: flex;
+    height: 60px;
+    p {
+      width: 375px;
+      margin-top: 7px;
+    }
+
+    .IconFooter {
+      display: flex;
+
+      a {
+        margin-right: 5px;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      .Email {
+        @include ImgLink(-191px, -430px, -191px, -462px);
+      }
+      .Skype {
+        @include ImgLink(-223px, -430px, -223px, -462px);
+      }
+      .Twitter {
+        @include ImgLink(-255px, -430px, -255px, -462px);
+      }
+      .Linkedin {
+        @include ImgLink(-287px, -430px, -287px, -462px);
+      }
+    }
+  }
+
+  a,
+  a:link {
+    color: $color-nau-do;
+    outline: none;
+    text-decoration: none;
+  }
+
+  .Linkedin,
+  .Twitter {
+    display: block;
+    text-indent: -9999px;
+  }
+
+  .Container {
+    max-width: 984px;
+    margin: 0 auto;
+    clear: both;
+  }
+  @media (max-width: 980px) {
+    .Container {
+      width: 768px;
+    }
+
+    .Intro h2 {
+      background-size: 768px;
+      font-size: 26px;
+      padding-top: 13px;
+      margin-top: 25px;
+    }
+
+    .MoreWorks {
+      .Container {
+        background-size: 245px auto;
+        .ImgMoreWorks {
+          left: 200px;
+          bottom: 350px;
+        }
+
+        .QuestionOpened {
+          left: 270px;
+          top: 430px;
+        }
+
+        .QuestionClosed {
+          right: 285px;
+          bottom: 110px;
+        }
+        p {
+          text-align: center;
+          margin: 430px auto auto 280px;
+          position: absolute;
+          color: #333333;
+          width: 210px;
+          font-size: 18px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .CraftmansPhoto {
+      img {
+        display: block;
+        width: 330px;
+        height: 330px;
+      }
+      h2 {
+        font-size: 30px !important;
+      }
+      p {
+        font-size: 17px !important;
+      }
+      .AboutSection {
+        .HardAndPlay {
+          width: 360px !important;
+        }
+        strong {
+          right: -30px !important;
+        }
+      }
+    }
+
+    .Contact {
+      .SkillsImg {
+        display: none;
+      }
+      .ContactImg {
+        top: -20px !important;
+        right: 30px !important;
+        width: 300px;
+        height: 260px;
+      }
+    }
+  }
+  @media (max-width: 860px) {
+    .Container {
+      width: 580px;
+    }
+    .Header {
+      display: none;
+    }
+    .Intro {
+      .ImgScraftsman {
+        background: url("images/IntroSmall.png") no-repeat center 20px;
+        height: 320px;
+        width: 320px;
+        .AroundFindOutMore {
+          top: 200px;
+          left: 10px;
+        }
+        .FindOutMore {
+          left: 40px;
+          top: 210px;
+        }
+      }
+      h2 {
+        display: none;
+      }
+    }
+
+    .MoreWorks {
+      .Container {
+        background: none;
+        .ImgMoreWorks {
+          left: 240px;
+          bottom: 290px;
+        }
+
+        .QuestionOpened,
+        .QuestionClosed,
+        p {
+          display: none;
+        }
+      }
+    }
+
+    .CraftmansPhoto {
+      img,
+      .PhotoMore,
+      .GreatUX {
+        display: none !important;
+      }
+      h2 {
+        font-size: 30px !important;
+      }
+      p {
+        font-size: 17px !important;
+      }
+      .AboutSection {
+        padding: 10px;
+        .HardAndPlay {
+          width: 760px !important;
+        }
+        strong {
+          right: -30px !important;
+        }
+      }
+    }
+
+    .Contact {
+      .SkillsImg {
+        display: none;
+      }
+      .ContactImg {
+        display: none;
+      }
+      .FromContact {
+        margin-left: 60px;
+      }
+    }
+    .Footer {
+      margin-left: 20px;
+    }
+  }
+}
