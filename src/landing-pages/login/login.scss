@@ -1,0 +1,41 @@
+.Login {
+  background: url("./images/background.jpg");
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 90px 90px;
+    width: 500px;
+    // height: 500px;
+
+    background-color: rgba(94, 123, 138, 0.4);
+    border-radius: 5px;
+    h1 {
+      font-size: 80px;
+      margin: 70px auto;
+      color: #ffffff;
+    }
+    input,
+    button {
+      padding: 15px 15px;
+      margin: 15px 40px;
+      border: 0;
+    }
+    button {
+      color: #ffffff;
+      background-color: #1e90ff;
+      margin-bottom: 50px;
+    }
+  }
+}

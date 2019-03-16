@@ -6,6 +6,8 @@ export default function Home() {
     <div>
       <span>Wellcome to my Website</span>
       <br />
+      <Link to="/login">Login</Link>
+      <br />
       <Link to="/shopify">Shopify</Link>
       <br />
       <Link to="/craftsman">Sraftsman</Link>

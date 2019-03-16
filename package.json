@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://mvtnhan.github.io/Portfolio",
   "dependencies": {
+    "formik": "^1.5.1",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
