@@ -5,16 +5,16 @@ import { Image, Popup } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "./scraftsman.scss";
 
-import Logo from "./images/Logo.png";
-import LestHost from "./images/LetsHost.png";
-import FFVentureCapital from "./images/FFVentureCapital.png";
-import RavenDB from "./images/RavenDB.png";
-import CloudVPS from "./images/CloudVPS.png";
-import Host365 from "./images/Host365.png";
-import MedievalWall from "./images/MedievalWall.png";
-import About from "./images/About.png";
-import Contact from "./images/Contact.png";
-import Skills from "./images/Skills.png";
+import Logo from "./images/logo.png";
+import LestHost from "./images/lets-host.png";
+import FFVentureCapital from "./images/ff-venture-capital.png";
+import RavenDB from "./images/ravendb.png";
+import CloudVPS from "./images/cloudvps.png";
+import Host365 from "./images/host365.png";
+import MedievalWall from "./images/medieval-wall.png";
+import About from "./images/about.png";
+import Contact from "./images/contact.png";
+import Skills from "./images/skills.png";
 
 export const Social = {
   linkedin: "https://www.linkedin.com/in/mvtnhan/",
@@ -48,13 +48,13 @@ export function renderIntro() {
           <Image href="#" className="ImgFindOutMe">
             Find Out <span>More</span>
           </Image>
-          <a class=" MyWorks" href="#">
+          <a className="MyWorks" href="#">
             My Works
           </a>
-          <a class="AboutMe" href="#">
+          <a className="AboutMe" href="#">
             About Me
           </a>
-          <a class="ContactInfo" href="#">
+          <a className="ContactInfo" href="#">
             Contact Info
           </a>
         </div>
@@ -230,17 +230,14 @@ export function renderFooter() {
       <p>Copyright © 2014 Web Craftsman. Contact Preferred Via:</p>
       <div className="IconFooter">
         {Sociallist.map(social => (
-          <>
-            {" "}
-            <a href={social.link}>
-              <Popup
-                className="TooltipCraftsman"
-                trigger={<Image className={social.img} />}
-                content={social.content}
-                position="top center"
-              />
-            </a>
-          </>
+          <a href={social.link} key={social.content}>
+            <Popup
+              className="TooltipCraftsman"
+              trigger={<Image className={social.img} />}
+              content={social.content}
+              position="top center"
+            />
+          </a>
         ))}
       </div>
     </div>
