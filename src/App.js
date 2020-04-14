@@ -6,12 +6,12 @@ import Home from "./home.js";
 
 export default function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/Portfolio">
       <div>
         <Route path="/" exact component={Home} />
         <Route path="/shopify/" component={Shopify} />
         <Route path="/craftsman/" component={Craftsman} />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
