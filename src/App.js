@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Login from "./landing-pages/login/index.js";
-import Shopify from "./landing-pages/shopify/index.js";
-import Craftsman from "./landing-pages/craftsman/index.js";
+import Login from "./pages/login/index.js";
+import Shopify from "./pages/shopify/index.js";
+import Craftsman from "./pages/craftsman/index.js";
 import Home from "./home.js";
 
 const App = () => (

@@ -20,7 +20,7 @@ export const Social = {
   linkedin: "https://www.linkedin.com/in/mvtnhan/",
   twitter: "https://twitter.com/mvtnhan",
   email: "mailto:someone@example.com",
-  skype: "https://join.skype.com/invite/c2MTvJakdVJG"
+  skype: "https://join.skype.com/invite/c2MTvJakdVJG",
 };
 
 export function renderHeader() {
@@ -207,29 +207,29 @@ export function renderFooter() {
     {
       link: Social.email,
       img: "Email",
-      content: "mvtnhan@gmail.com"
+      content: "mvtnhan@gmail.com",
     },
     {
       link: Social.skype,
       img: "Skype",
-      content: "Skype"
+      content: "Skype",
     },
     {
       link: Social.twitter,
       img: "Twitter",
-      content: "Twitter"
+      content: "Twitter",
     },
     {
       link: Social.Linkedin,
       img: "Linkedin",
-      content: "Linkedin"
-    }
+      content: "Linkedin",
+    },
   ];
   return (
     <div className="Footer Container">
       <p>Copyright © 2014 Web Craftsman. Contact Preferred Via:</p>
       <div className="IconFooter">
-        {Sociallist.map(social => (
+        {Sociallist.map((social) => (
           <>
             {" "}
             <a href={social.link}>
