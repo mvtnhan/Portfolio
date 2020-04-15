@@ -5,39 +5,22 @@ import { Image, Popup } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "./scraftsman.scss";
 
-<<<<<<< HEAD
-import Logo from "./images/logo.png";
-import LestHost from "./images/lets-host.png";
-import FFVentureCapital from "./images/ff-venture-capital.png";
-import RavenDB from "./images/ravendb.png";
-import CloudVPS from "./images/cloudvps.png";
-import Host365 from "./images/host365.png";
-import MedievalWall from "./images/medieval-wall.png";
-import About from "./images/about.png";
-import Contact from "./images/contact.png";
-import Skills from "./images/skills.png";
-=======
 import Logo from "./images/Logo.png";
 import LestHost from "./images/LetsHost.png";
 import FFVentureCapital from "./images/FFVentureCapital.png";
-import RavenDB from "./images/RavenDB.png";
-import CloudVPS from "./images/CloudVPS.png";
+import RavenDB from "./images/Ravendb.png";
+import CloudVPS from "./images/Cloudvps.png";
 import Host365 from "./images/Host365.png";
 import MedievalWall from "./images/MedievalWall.png";
 import About from "./images/About.png";
 import Contact from "./images/Contact.png";
 import Skills from "./images/Skills.png";
->>>>>>> ft/login
 
 export const Social = {
   linkedin: "https://www.linkedin.com/in/mvtnhan/",
   twitter: "https://twitter.com/mvtnhan",
   email: "mailto:someone@example.com",
-<<<<<<< HEAD
-  skype: "https://join.skype.com/invite/c2MTvJakdVJG"
-=======
   skype: "https://join.skype.com/invite/c2MTvJakdVJG",
->>>>>>> ft/login
 };
 
 export function renderHeader() {
@@ -65,15 +48,6 @@ export function renderIntro() {
           <Image href="#" className="ImgFindOutMe">
             Find Out <span>More</span>
           </Image>
-<<<<<<< HEAD
-          <a className="MyWorks" href="#">
-            My Works
-          </a>
-          <a className="AboutMe" href="#">
-            About Me
-          </a>
-          <a className="ContactInfo" href="#">
-=======
           <a class=" MyWorks" href="#">
             My Works
           </a>
@@ -81,7 +55,6 @@ export function renderIntro() {
             About Me
           </a>
           <a class="ContactInfo" href="#">
->>>>>>> ft/login
             Contact Info
           </a>
         </div>
@@ -234,47 +207,29 @@ export function renderFooter() {
     {
       link: Social.email,
       img: "Email",
-<<<<<<< HEAD
-      content: "mvtnhan@gmail.com"
-=======
       content: "mvtnhan@gmail.com",
->>>>>>> ft/login
     },
     {
       link: Social.skype,
       img: "Skype",
-<<<<<<< HEAD
-      content: "Skype"
-=======
       content: "Skype",
->>>>>>> ft/login
     },
     {
       link: Social.twitter,
       img: "Twitter",
-<<<<<<< HEAD
-      content: "Twitter"
-=======
       content: "Twitter",
->>>>>>> ft/login
     },
     {
       link: Social.Linkedin,
       img: "Linkedin",
-<<<<<<< HEAD
-      content: "Linkedin"
-    }
-=======
       content: "Linkedin",
     },
->>>>>>> ft/login
   ];
   return (
     <div className="Footer Container">
       <p>Copyright © 2014 Web Craftsman. Contact Preferred Via:</p>
       <div className="IconFooter">
-<<<<<<< HEAD
-        {Sociallist.map(social => (
+        {Sociallist.map((social) => (
           <a href={social.link} key={social.content}>
             <Popup
               className="TooltipCraftsman"
@@ -283,20 +238,6 @@ export function renderFooter() {
               position="top center"
             />
           </a>
-=======
-        {Sociallist.map((social) => (
-          <>
-            {" "}
-            <a href={social.link}>
-              <Popup
-                className="TooltipCraftsman"
-                trigger={<Image className={social.img} />}
-                content={social.content}
-                position="top center"
-              />
-            </a>
-          </>
->>>>>>> ft/login
         ))}
       </div>
     </div>

@@ -22,19 +22,6 @@ $color-grey: #666666;
 
 .Scraftsman {
   @mixin ImgDesign($a, $b) {
-<<<<<<< HEAD
-    background: url("images/design-elements.png") no-repeat $a $b;
-  }
-
-  @mixin ImgLink($a, $b, $c, $d) {
-    background: url("images/design-elements.png") no-repeat $a $b;
-    &:hover {
-      background: url("images/design-elements.png") no-repeat $c $d;
-    }
-  }
-
-  background: url("./images/bodybg.jpg");
-=======
     background: url("images/DesignElements.png") no-repeat $a $b;
   }
 
@@ -46,7 +33,6 @@ $color-grey: #666666;
   }
 
   background: url("./images/Bodybg.jpg");
->>>>>>> ft/login
   .Header {
     overflow: hidden;
     height: 125px;
@@ -54,11 +40,7 @@ $color-grey: #666666;
 
     .Logo {
       width: 565px;
-<<<<<<< HEAD
-      background: url("./images/logo-rope.png") no-repeat center top;
-=======
       background: url("./images/LogoRope.png") no-repeat center top;
->>>>>>> ft/login
       padding: 38px;
       position: absolute;
 
@@ -78,11 +60,7 @@ $color-grey: #666666;
     font-family: Craftsmans, Arial, sans-serif;
     .ImgScraftsman {
       margin: 0 auto;
-<<<<<<< HEAD
-      background: url("images/intro.png") no-repeat center 20px;
-=======
       background: url("images/Intro.png") no-repeat center 20px;
->>>>>>> ft/login
       height: 420px;
       width: 673px;
       position: relative;
@@ -203,11 +181,7 @@ $color-grey: #666666;
 
     h2 {
       text-align: center;
-<<<<<<< HEAD
-      background: url("images/intro-central-banner.png") no-repeat center top;
-=======
       background: url("images/IntroCentralBanner.png") no-repeat center top;
->>>>>>> ft/login
       font-weight: 400;
       color: $color-while;
       font-size: 31.5px;
@@ -217,21 +191,13 @@ $color-grey: #666666;
   }
 
   .MoreWorks {
-<<<<<<< HEAD
-    background: url("images/worksbg.jpg") repeat-x left top;
-=======
     background: url("images/Worksbg.jpg") repeat-x left top;
->>>>>>> ft/login
     margin: 100px 0 0 0;
     font-family: Craftsmans, Arial, sans-serif;
 
     .Container {
       height: 685px;
-<<<<<<< HEAD
-      background: url("images/works.png") no-repeat center 75px;
-=======
       background: url("images/Works.png") no-repeat center 75px;
->>>>>>> ft/login
       position: relative;
 
       a {
@@ -405,11 +371,7 @@ $color-grey: #666666;
         .GreatUX {
           width: 455px;
           height: 165px;
-<<<<<<< HEAD
-          background: url("images/about-work-flow.png") no-repeat left;
-=======
           background: url("images/AboutWorkFlow.png") no-repeat left;
->>>>>>> ft/login
           margin: 20px 0 0 5px;
           position: relative;
           display: flex;
@@ -448,11 +410,7 @@ $color-grey: #666666;
   }
 
   .Contact {
-<<<<<<< HEAD
-    background: url("images/contactbg.jpg") repeat-x left top;
-=======
     background: url("images/Contactbg.jpg") repeat-x left top;
->>>>>>> ft/login
     overflow: hidden;
     padding: 60px 0 0 0;
 
@@ -594,10 +552,6 @@ $color-grey: #666666;
     margin: 0 auto;
     clear: both;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> ft/login
   @media (max-width: 980px) {
     .Container {
       width: 768px;
@@ -673,10 +627,6 @@ $color-grey: #666666;
       }
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> ft/login
   @media (max-width: 860px) {
     .Container {
       width: 580px;
@@ -686,11 +636,7 @@ $color-grey: #666666;
     }
     .Intro {
       .ImgScraftsman {
-<<<<<<< HEAD
-        background: url("images/intro-small.png") no-repeat center 20px;
-=======
         background: url("images/IntroSmall.png") no-repeat center 20px;
->>>>>>> ft/login
         height: 320px;
         width: 320px;
         .AroundFindOutMore {
@@ -761,7 +707,6 @@ $color-grey: #666666;
       margin-left: 20px;
     }
   }
-<<<<<<< HEAD
 
   @media (max-width: 540px) {
     .Container {
@@ -800,6 +745,4 @@ $color-grey: #666666;
       }
     }
   }
-=======
->>>>>>> ft/login
 }
