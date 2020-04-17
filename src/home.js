@@ -5,12 +5,10 @@ export default function Home() {
   return (
     <div>
       <span>Wellcome to my Website</span>
-      <br />
       <Link to="/login">Login</Link>
-      <br />
       <Link to="/shopify">Shopify</Link>
-      <br />
       <Link to="/craftsman">Sraftsman</Link>
+      <Link to="/leospa">Leospa</Link>
     </div>
   );
 }
