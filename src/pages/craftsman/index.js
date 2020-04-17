@@ -6,15 +6,15 @@ import "semantic-ui-css/semantic.min.css";
 import "./scraftsman.scss";
 
 import Logo from "./images/Logo.png";
-import LestHost from "./images/LetsHost.png";
-import FFVentureCapital from "./images/FFVentureCapital.png";
-import RavenDB from "./images/Ravendb.png";
-import CloudVPS from "./images/Cloudvps.png";
-import Host365 from "./images/Host365.png";
-import MedievalWall from "./images/MedievalWall.png";
-import About from "./images/About.png";
-import Contact from "./images/Contact.png";
-import Skills from "./images/Skills.png";
+import LestHost from "./images/lets-host.png";
+import FFVentureCapital from "./images/ff-venture-capital.png";
+import RavenDB from "./images/ravendb.png";
+import CloudVPS from "./images/cloudvps.png";
+import Host365 from "./images/host365.png";
+import MedievalWall from "./images/medieval-wall.png";
+import About from "./images/about.png";
+import Contact from "./images/contact.png";
+import Skills from "./images/skills.png";
 
 export const Social = {
   linkedin: "https://www.linkedin.com/in/mvtnhan/",
