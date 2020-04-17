@@ -731,6 +731,9 @@ footer {
     margin: 4.5rem 0;
     display: flex;
     align-items: center;
+    img {
+        height: 112px;
+    }
 }
 .footer__social-item {
     font-size: 2rem;
@@ -753,7 +756,7 @@ footer {
     display: flex;
     font-size: 13px;
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin-bottom: 1rem !important;
 }
 .themeies{
     color: $primary-color;    
